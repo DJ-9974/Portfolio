@@ -2241,25 +2241,25 @@ html, body {
 }
 
 .dermtrack-gradient {
-  background: radial-gradient(circle at center, rgba(0, 229, 255, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/Portfolio/project_visual.jpg');
+  background: radial-gradient(circle at center, rgba(0, 229, 255, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/project_visual.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .solarpro-gradient {
-  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/Portfolio/project_visual.jpg');
+  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/project_visual.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .disaster-gradient {
-  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/Portfolio/project_visual.jpg');
+  background: radial-gradient(circle at center, rgba(59, 130, 246, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/project_visual.jpg');
   background-size: cover;
   background-position: center;
 }
 
 .sdn-gradient {
-  background: radial-gradient(circle at center, rgba(217, 70, 239, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/Portfolio/project_visual.jpg');
+  background: radial-gradient(circle at center, rgba(217, 70, 239, 0.35) 0%, rgba(5, 5, 8, 0.92) 75%), url('/project_visual.jpg');
   background-size: cover;
   background-position: center;
 }
