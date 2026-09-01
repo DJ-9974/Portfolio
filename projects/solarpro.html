@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SolarPro — Smart Solar Tracking & Monitoring | Dheeraj Kolli</title>
+  <meta name="description" content="SolarPro is an automated dual-axis solar tracking and real-time energy monitoring system prototype created by Dheeraj Kolli.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="case-study-body solarpro-theme">
+
+  <!-- Atmospheric Overlay -->
+  <div class="atmospheric-overlay"></div>
+
+  <!-- Top Header Navigation (Fixed Top - z-index 1000) -->
+  <header class="top-header">
+    <a href="/" class="brand-logo" id="brand-logo">
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 20H45V80H20V20Z" fill="#00E5FF"/>
+        <path d="M55 20L85 50L55 80V20Z" fill="white"/>
+      </svg>
+      <span class="logo-text">DK</span>
+    </a>
+
+    <!-- Floating Navigation Pill -->
+    <nav class="floating-nav" id="floating-nav">
+      <a href="/" class="nav-pill">HOME</a>
+      <a href="/about.html" class="nav-pill">ABOUT</a>
+      <a href="/projects.html" class="nav-pill active">PROJECTS</a>
+      <a href="/contact.html" class="nav-pill">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main Case Study Container -->
+  <main class="case-study-container">
+    
+    <!-- 1. HERO SECTION -->
+    <header class="case-hero-block">
+      <div class="case-badge animate-fade">
+        <span class="badge-square amber"></span>
+        <span>SMART ENERGY × HARDWARE × SOFTWARE</span>
+      </div>
+
+      <h1 class="case-main-title solar-title animate-fade">SOLARPRO</h1>
+      <p class="case-subtitle animate-fade-delay-1">Smart Solar Tracking & Real-Time Monitoring</p>
+      
+      <div class="case-tech-title animate-fade-delay-1">
+        "An automated solar tracking and monitoring system that follows the sun's movement while providing real-time energy data through a web interface."
+      </div>
+
+      <!-- Spec Header Bar -->
+      <div class="case-specs-bar glass-card animate-fade-delay-2">
+        <div class="spec-bar-item">
+          <span class="spec-lbl">DEVELOPER</span>
+          <span class="spec-val amber">DHEERAJ KOLLI</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">ROLE</span>
+          <span class="spec-val">AI / Full-Stack / Systems</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">SYSTEM</span>
+          <span class="spec-val">Solar Tracking & Monitoring Prototype</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">CONTROLLER</span>
+          <span class="spec-val">Arduino / Microcontroller</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Canvas Stage -->
+      <div class="case-hero-visual glass-card animate-fade-delay-3">
+        <div class="visual-header">
+          <span class="visual-tag">STAGE // AUTOMATED SOLAR TRACKING AXIS</span>
+          <span class="visual-status amber-status">● HARDWARE TELEMETRY STREAM</span>
+        </div>
+
+        <div class="hero-pipeline-nodes">
+          <div class="pipeline-node amber-glow">
+            <span class="p-icon">☀️</span>
+            <span class="p-label">SUNLIGHT</span>
+          </div>
+          <div class="pipeline-arrow amber">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">📡</span>
+            <span class="p-label">LDR SENSORS</span>
+          </div>
+          <div class="pipeline-arrow amber">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">⚡</span>
+            <span class="p-label">ARDUINO CONTROLLER</span>
+          </div>
+          <div class="pipeline-arrow amber">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">🔄</span>
+            <span class="p-label">SERVO MOTOR ROTATION</span>
+          </div>
+          <div class="pipeline-arrow amber">➔</div>
+          <div class="pipeline-node success-node amber-node">
+            <span class="p-icon">💻</span>
+            <span class="p-label">WEB DASHBOARD</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. PROJECT OVERVIEW -->
+    <section class="case-section-block">
+      <div class="section-label amber">01 — PROJECT OVERVIEW</div>
+      <h2 class="section-heading">SMART SOLAR TRACKING & TELEMETRY</h2>
+      
+      <p class="section-lead-paragraph">
+        Solar energy is one of the cleanest and most abundant renewable resources. However, fixed solar panels are not always aligned with the sun, which can reduce energy generation efficiency. SolarPro addresses this by combining physical dual-axis solar tracking with real-time web telemetry.
+      </p>
+
+      <div class="three-pillar-grid">
+        <div class="pillar-card glass-card">
+          <span class="pillar-num amber">01</span>
+          <h3 class="pillar-title">AUTOMATED TRACKING</h3>
+          <p class="pillar-desc">Continuously senses sunlight orientation and rotates the solar plate toward the brightest position.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num amber">02</span>
+          <h3 class="pillar-title">ENERGY MEASUREMENT</h3>
+          <p class="pillar-desc">Measures and records voltage and power output generated by the solar panel array.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num amber">03</span>
+          <h3 class="pillar-title">WEB MONITORING</h3>
+          <p class="pillar-desc">Transmits telemetry data to a live web interface for real-time visualization and analytics.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE PROBLEM -->
+    <section class="case-section-block">
+      <div class="section-label amber">02 — THE PROBLEM</div>
+      <h2 class="section-heading">LIMITATIONS OF FIXED SOLAR INSTALLATIONS</h2>
+
+      <div class="problems-grid">
+        <div class="problem-card glass-card">
+          <span class="prob-num amber">01</span>
+          <h3 class="prob-title">FIXED PANEL ALIGNMENT</h3>
+          <p class="prob-desc">Fixed solar panels cannot continuously adjust their orientation according to the changing position of the sun throughout the day.</p>
+        </div>
+        <div class="problem-card glass-card">
+          <span class="prob-num amber">02</span>
+          <h3 class="prob-title">REDUCED EFFICIENCY</h3>
+          <p class="prob-desc">Improper alignment with the sun reduces the total intensity of sunlight received, leading to lower energy generation efficiency.</p>
+        </div>
+        <div class="problem-card glass-card">
+          <span class="prob-num amber">03</span>
+          <h3 class="prob-title">LIMITED MONITORING</h3>
+          <p class="prob-desc">Users lack convenient, transparent methods to monitor real-time power generation and energy usage.</p>
+        </div>
+      </div>
+
+      <!-- Visual Statement Banner -->
+      <div class="visual-statement-banner glass-card">
+        <div class="stmt-side">
+          <span class="stmt-lbl">FIXED PANEL LIMITATION</span>
+          <span class="stmt-val">FIXED ORIENTATION ➔ VARIABLE SUN POSITION ➔ MISALIGNED PANEL ➔ REDUCED EFFICIENCY</span>
+        </div>
+        <div class="stmt-arrow amber">↓</div>
+        <div class="stmt-side amber">
+          <span class="stmt-lbl">THE SOLARPRO SOLUTION</span>
+          <span class="stmt-val">"Track the sun. Measure the energy. Visualize the data."</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. OBJECTIVES -->
+    <section class="case-section-block">
+      <div class="section-label amber">03 — OBJECTIVES</div>
+      <h2 class="section-heading">PROJECT OBJECTIVES</h2>
+
+      <div class="solution-steps-grid">
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">01</span>
+          <h3 class="step-title">AUTOMATED TRACKING</h3>
+          <p class="step-desc">Design a solar plate that automatically rotates according to the sun's position.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">02</span>
+          <h3 class="step-title">ENERGY MEASUREMENT</h3>
+          <p class="step-desc">Measure and record real-time energy generation data.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">03</span>
+          <h3 class="step-title">REAL-TIME VISUALIZATION</h3>
+          <p class="step-desc">Provide real-time data visualization through a web interface.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">04</span>
+          <h3 class="step-title">EFFICIENCY & AWARENESS</h3>
+          <p class="step-desc">Enhance overall efficiency and user awareness of solar power usage.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CORE SYSTEM ARCHITECTURE -->
+    <section class="case-section-block">
+      <div class="section-label amber">04 — SYSTEM ARCHITECTURE</div>
+      <h2 class="section-heading">CORE SYSTEM ARCHITECTURE</h2>
+
+      <div class="architecture-diagram-container glass-card">
+        <span class="pipe-label amber">HARDWARE CONTROL LOOP</span>
+        <div class="arch-flow">
+          <div class="arch-node amber">
+            <span class="arch-title">SUNLIGHT</span>
+            <span class="arch-sub">Solar Light Source</span>
+          </div>
+          <div class="arch-line amber"></div>
+          <div class="arch-node">
+            <span class="arch-title">SOLAR PANEL</span>
+            <span class="arch-sub">Photovoltaic Array</span>
+          </div>
+          <div class="arch-line amber"></div>
+          <div class="arch-node amber">
+            <span class="arch-title">LDR SENSORS</span>
+            <span class="arch-sub">Light Sensing Array</span>
+          </div>
+          <div class="arch-line amber"></div>
+          <div class="arch-node">
+            <span class="arch-title">ARDUINO CONTROLLER</span>
+            <span class="arch-sub">Signal Processing</span>
+          </div>
+          <div class="arch-line amber"></div>
+          <div class="arch-node green">
+            <span class="arch-title">MOTOR / SERVO</span>
+            <span class="arch-sub">Rotational Actuation</span>
+          </div>
+        </div>
+
+        <div class="arch-fusion-bridge">
+          <div class="bridge-line"></div>
+          <div class="bridge-label amber">PARALLEL TELEMETRY STREAM</div>
+          <div class="bridge-line"></div>
+        </div>
+
+        <span class="pipe-label amber">DIGITAL MONITORING STREAM</span>
+        <div class="arch-flow">
+          <div class="arch-node cyan">
+            <span class="arch-title">ENERGY MEASUREMENT</span>
+            <span class="arch-sub">Voltage / Current Sensing</span>
+          </div>
+          <div class="arch-line cyan"></div>
+          <div class="arch-node">
+            <span class="arch-title">DATA COLLECTION</span>
+            <span class="arch-sub">Serial / Cloud Telemetry</span>
+          </div>
+          <div class="arch-line cyan"></div>
+          <div class="arch-node amber">
+            <span class="arch-title">WEBSITE DASHBOARD</span>
+            <span class="arch-sub">Real-Time Web Interface</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. HOW IT WORKS -->
+    <section class="case-section-block">
+      <div class="section-label amber">05 — HOW IT WORKS</div>
+      <h2 class="section-heading">OPERATIONAL WORKFLOW</h2>
+
+      <div class="solution-steps-grid">
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">01</span>
+          <h3 class="step-title">DETECT</h3>
+          <p class="step-desc">LDR sensors detect the direction of maximum sunlight intensity.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">02</span>
+          <h3 class="step-title">PROCESS</h3>
+          <p class="step-desc">Arduino microcontrollers calculate analog sensor differential values.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">03</span>
+          <h3 class="step-title">ROTATE</h3>
+          <p class="step-desc">The motor rotates the solar plate smoothly toward the brightest position.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">04</span>
+          <h3 class="step-title">MEASURE</h3>
+          <p class="step-desc">Power generation and energy metrics are measured and recorded.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge amber">05</span>
+          <h3 class="step-title">MONITOR</h3>
+          <p class="step-desc">Collected telemetry data is transmitted to the web interface for live monitoring.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. PROTOTYPE & LIVE DASHBOARD -->
+    <section class="case-section-block">
+      <div class="section-label amber">06 — PROTOTYPE & DASHBOARD</div>
+      <h2 class="section-heading">WORKING PROTOTYPE & LIVE MONITORING</h2>
+
+      <div class="dual-module-grid">
+        <!-- Physical System -->
+        <div class="module-card glass-card">
+          <span class="mod-num amber">01</span>
+          <h3 class="mod-title">PHYSICAL TRACKING SYSTEM</h3>
+          <span class="mod-sub">Hardware Base & Sensors</span>
+          <p class="mod-desc">The physical prototype consists of a solar panel mounted on a rotating base, controlled by an Arduino microcontroller and light-dependent resistor (LDR) sensors.</p>
+          <div class="mod-vis amber-vis">
+            <span>SOLAR PANEL</span> ➔ <span>LDRs</span> ➔ <span>ARDUINO</span> ➔ <span class="amber">SERVO</span>
+          </div>
+        </div>
+
+        <!-- Live Energy Monitoring Interface -->
+        <div class="module-card glass-card">
+          <span class="mod-num amber">02</span>
+          <h3 class="mod-title">LIVE ENERGY MONITORING</h3>
+          <span class="mod-sub">solarpromonitor.vercel.app</span>
+          <p class="mod-desc">The web interface displays energy generation data in real-time, providing transparent visualization of power metrics and system telemetry.</p>
+          <div class="mod-vis amber-vis">
+            <span>TELEMETRY DATA</span> ➔ <span>WEB DASHBOARD</span> ➔ <span class="amber">LIVE MONITORED</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. RESULTS & DEMONSTRATION -->
+    <section class="case-section-block">
+      <div class="section-label amber">07 — RESULTS</div>
+      <h2 class="section-heading">DEMONSTRATED OUTCOMES</h2>
+
+      <div class="three-pillar-grid">
+        <div class="pillar-card glass-card">
+          <span class="pillar-num amber">01</span>
+          <h3 class="pillar-title">SOLAR TRACKING</h3>
+          <p class="pillar-desc">Solar tracking increases power generation efficiency compared with fixed stationary panels.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num amber">02</span>
+          <h3 class="pillar-title">REAL-TIME MONITORING</h3>
+          <p class="pillar-desc">Website monitoring provides clear transparency in energy usage and generation metrics.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num amber">03</span>
+          <h3 class="pillar-title">COMPLETE SMART PROTOTYPE</h3>
+          <p class="pillar-desc">The prototype demonstrates a fully functional, integrated smart solar tracking and telemetry solution.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. ADVANTAGES & APPLICATIONS -->
+    <section class="case-section-block">
+      <div class="section-label amber">08 — ADVANTAGES & APPLICATIONS</div>
+      <h2 class="section-heading">WHY SOLARPRO?</h2>
+
+      <div class="comparison-grid">
+        <div class="comp-col glass-card">
+          <span class="comp-badge amber">ADVANTAGES</span>
+          <h3 class="comp-title">SYSTEM BENEFITS</h3>
+          <ul class="comp-list">
+            <li>Higher Solar Energy Efficiency</li>
+            <li>Real-Time Web Energy Monitoring</li>
+            <li>Affordable & Scalable Prototype Design</li>
+            <li>Promotes Renewable Energy Adoption</li>
+          </ul>
+        </div>
+
+        <div class="comp-col glass-card">
+          <span class="comp-badge amber">APPLICATIONS</span>
+          <h3 class="comp-title">TARGET DEPLOYMENTS</h3>
+          <ul class="comp-list">
+            <li>Residential Solar Power Systems</li>
+            <li>Industrial Solar Farms</li>
+            <li>Smart Homes & Smart Cities</li>
+            <li>Educational Renewable Energy Demonstrations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. SYSTEM COMPONENTS -->
+    <section class="case-section-block">
+      <div class="section-label amber">09 — SYSTEM COMPONENTS</div>
+      <h2 class="section-heading">HARDWARE & SOFTWARE COMPONENTS</h2>
+
+      <div class="tech-badges-grid">
+        <span class="tech-badge amber-badge">SOLAR PANEL</span>
+        <span class="tech-badge amber-badge">LDR SENSORS</span>
+        <span class="tech-badge amber-badge">ARDUINO / ESP32</span>
+        <span class="tech-badge amber-badge">MOTOR / SERVO</span>
+        <span class="tech-badge amber-badge">ENERGY MEASUREMENT CIRCUIT</span>
+        <span class="tech-badge amber-badge">WEB DASHBOARD</span>
+      </div>
+    </section>
+
+    <!-- 11. FUTURE ENHANCEMENTS -->
+    <section class="case-section-block">
+      <div class="section-label amber">10 — ROADMAP</div>
+      <h2 class="section-heading">FUTURE ENHANCEMENTS</h2>
+
+      <div class="future-grid">
+        <div class="future-card glass-card">
+          <span class="f-num amber">01</span>
+          <h4 class="f-title">IoT-BASED CLOUD MONITORING</h4>
+          <p class="f-desc">Expanded cloud analytics and long-term data storage.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num amber">02</span>
+          <h4 class="f-title">MOBILE APP SUPPORT</h4>
+          <p class="f-desc">Native mobile app for push alerts and telemetry view.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num amber">03</span>
+          <h4 class="f-title">AI SUN PATH PREDICTION</h4>
+          <p class="f-desc">Predictive algorithms for tracking during cloudy intervals.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num amber">04</span>
+          <h4 class="f-title">BATTERY STORAGE INTEGRATION</h4>
+          <p class="f-desc">Monitoring of battery charge/discharge cycles.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num amber">05</span>
+          <h4 class="f-title">LARGER-SCALE DEPLOYMENTS</h4>
+          <p class="f-desc">Scaling tracking architecture for commercial solar farms.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. PROJECT TAKEAWAY & ROLE -->
+    <section class="case-section-block">
+      <div class="section-label amber">11 — TAKEAWAY & CREDITS</div>
+      <h2 class="section-heading">PROJECT TAKEAWAY & ROLE</h2>
+
+      <div class="visual-statement-banner glass-card">
+        <div class="stmt-side amber">
+          <span class="stmt-lbl">SYSTEM VALUE</span>
+          <span class="stmt-val">FROM SUNLIGHT ➔ TO MOVEMENT ➔ TO ENERGY ➔ TO DATA ➔ TO INSIGHT</span>
+        </div>
+      </div>
+
+      <div class="role-card glass-card">
+        <h3 class="role-name">DHEERAJ KOLLI</h3>
+        <span class="role-title amber">AI / Full-Stack / Systems Development</span>
+        <p class="role-desc">"Contributed to the design and development of the SolarPro smart solar tracking and monitoring system."</p>
+      </div>
+    </section>
+
+    <!-- 13. PROJECT NAVIGATION FOOTER -->
+    <nav class="project-nav-row">
+      <a href="/projects/dermtrack.html" class="proj-nav-btn">
+        <span class="arrow">←</span> PREVIOUS PROJECT
+      </a>
+      <a href="/projects.html" class="proj-nav-btn main-back-btn">
+        BACK TO ALL PROJECTS
+      </a>
+      <a href="/projects/crisis-response.html" class="proj-nav-btn">
+        NEXT PROJECT <span class="arrow">→</span>
+      </a>
+    </nav>
+
+    <!-- Minimal Main Footer -->
+    <footer class="main-footer">
+      <div class="footer-left">
+        <span class="footer-brand">DHEERAJ KOLLI</span>
+        <span class="footer-location">📍 Rajahmundry, AP, India</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-copy">© Dheeraj Kolli. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/projects/solarpro.js"></script>
+</body>
+</html>

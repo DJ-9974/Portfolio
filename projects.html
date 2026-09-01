@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selected Work — Dheeraj Kolli</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="projects-page-body">
+
+  <!-- Technical Blueprint Grid & Atmospheric Overlay -->
+  <div class="technical-blueprint-bg"></div>
+  <div class="atmospheric-overlay"></div>
+
+  <!-- Top Header Navigation (Fixed Top - z-index 1000) -->
+  <header class="top-header">
+    <a href="/" class="brand-logo" id="brand-logo">
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 20H45V80H20V20Z" fill="#00E5FF"/>
+        <path d="M55 20L85 50L55 80V20Z" fill="white"/>
+      </svg>
+      <span class="logo-text">DK</span>
+    </a>
+
+    <!-- Floating Navigation Pill -->
+    <nav class="floating-nav" id="floating-nav">
+      <a href="/" class="nav-pill">HOME</a>
+      <a href="/about.html" class="nav-pill">ABOUT</a>
+      <a href="/projects.html" class="nav-pill active">PROJECTS</a>
+      <a href="/contact.html" class="nav-pill">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Dedicated Technical Projects Archive Container -->
+  <main class="projects-archive-container">
+    
+    <!-- Editorial Archive Hero Header -->
+    <section class="archive-hero-header">
+      <div class="tech-status-line">
+        <span class="status-dot"></span>
+        <span class="status-text">PROJECTS / 04 &nbsp;•&nbsp; FOCUS / AI + FULL-STACK + SYSTEMS</span>
+      </div>
+
+      <h1 class="archive-hero-title">SELECTED <span class="year-accent">WORK</span></h1>
+      <p class="archive-hero-subtitle">SYSTEMS, EXPERIENCES & EXPERIMENTS I'VE BUILT.</p>
+    </section>
+
+    <!-- Minimal Functional Category Filter -->
+    <section class="archive-filter-bar">
+      <div class="filter-pills-group" id="filter-pills">
+        <button class="filter-pill active" data-filter="all">ALL [04]</button>
+        <button class="filter-pill" data-filter="ai">AI / ML</button>
+        <button class="filter-pill" data-filter="fullstack">FULL STACK</button>
+        <button class="filter-pill" data-filter="networking">NETWORKING</button>
+        <button class="filter-pill" data-filter="iot">IoT</button>
+      </div>
+    </section>
+
+    <!-- Split Architectural View: Editorial Rows (Left) + Interactive Preview Monitor (Right) -->
+    <div class="archive-layout-grid">
+      
+      <!-- LEFT COLUMN: Large Horizontal Editorial Project Rows -->
+      <section class="editorial-rows-list" id="editorial-rows-list">
+        
+        <!-- ROW 01: DermTrack -->
+        <article class="editorial-row-card glass-card active-row" data-index="0" data-category="ai">
+          <div class="row-left-header">
+            <span class="row-num">01</span>
+            <div class="row-meta">
+              <span class="row-tag-badge">AI / ML • COMPUTER VISION</span>
+              <h2 class="row-title">DermTrack — AI Skin Disease Monitoring</h2>
+            </div>
+          </div>
+
+          <p class="row-description">
+            A dual-stage neural-network approach combining MobileNetV2-based spatial feature extraction with temporal LSTM modeling for tracking lesion progression over time.
+          </p>
+
+          <div class="row-tech-tags">
+            <span class="tag cyan">Python</span>
+            <span class="tag cyan">PyTorch</span>
+            <span class="tag cyan">MobileNetV2</span>
+            <span class="tag cyan">LSTM</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">Flask</span>
+          </div>
+
+          <div class="row-action-bar">
+            <a href="/projects/dermtrack.html" class="row-case-btn">
+              <span>VIEW CASE STUDY</span>
+              <span class="arrow">➔</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ROW 02: SolarPro -->
+        <article class="editorial-row-card glass-card" data-index="1" data-category="iot">
+          <div class="row-left-header">
+            <span class="row-num">02</span>
+            <div class="row-meta">
+              <span class="row-tag-badge">IoT & EMBEDDED • TELEMETRY</span>
+              <h2 class="row-title">SolarPro — IoT Dual-Axis Solar Tracker</h2>
+            </div>
+          </div>
+
+          <p class="row-description">
+            An automated solar-tracking prototype combining light-dependent sensors, microcontroller-based control and dual-axis movement with a web-based monitoring interface.
+          </p>
+
+          <div class="row-tech-tags">
+            <span class="tag amber">ESP32 / Arduino</span>
+            <span class="tag amber">Sensors & Actuators</span>
+            <span class="tag">C++</span>
+            <span class="tag blue">React</span>
+            <span class="tag blue">REST APIs</span>
+          </div>
+
+          <div class="row-action-bar">
+            <a href="/projects/solarpro.html" class="row-case-btn">
+              <span>VIEW CASE STUDY</span>
+              <span class="arrow">➔</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ROW 03: Crisis Response Management -->
+        <article class="editorial-row-card glass-card" data-index="2" data-category="fullstack">
+          <div class="row-left-header">
+            <span class="row-num">03</span>
+            <div class="row-meta">
+              <span class="row-tag-badge">WEB DEV • FULL-STACK • SYSTEM DESIGN</span>
+              <h2 class="row-title">Crisis Response Management</h2>
+            </div>
+          </div>
+
+          <p class="row-description">
+            A web platform concept for disaster reporting, volunteer registration and centralized emergency-response information.
+          </p>
+
+          <div class="row-tech-tags">
+            <span class="tag blue">HTML</span>
+            <span class="tag blue">CSS</span>
+            <span class="tag amber">Web Development</span>
+            <span class="tag">System Design</span>
+          </div>
+
+          <div class="row-action-bar">
+            <a href="/projects/crisis-response.html" class="row-case-btn">
+              <span>VIEW CASE STUDY</span>
+              <span class="arrow">➔</span>
+            </a>
+          </div>
+        </article>
+
+        <!-- ROW 04: SDN Traffic Control Engine -->
+        <article class="editorial-row-card glass-card" data-index="3" data-category="networking">
+          <div class="row-left-header">
+            <span class="row-num">04</span>
+            <div class="row-meta">
+              <span class="row-tag-badge">SDN NETWORKING • OPENFLOW</span>
+              <h2 class="row-title">SDN Network Performance & Traffic Control Engine</h2>
+            </div>
+          </div>
+
+          <p class="row-description">
+            Software-Defined Networking OpenFlow controller application programmed using the Ryu framework and Mininet topology emulation with Open vSwitch and iPerf3 dynamic flow benchmarking.
+          </p>
+
+          <div class="row-tech-tags">
+            <span class="tag purple">OpenFlow</span>
+            <span class="tag purple">Ryu Controller</span>
+            <span class="tag purple">Mininet</span>
+            <span class="tag purple">Open vSwitch</span>
+            <span class="tag purple">iPerf3</span>
+            <span class="tag">Python</span>
+          </div>
+
+          <div class="row-action-bar">
+            <button class="row-case-btn open-case-study-btn" data-project="3">
+              <span>VIEW CASE STUDY</span>
+              <span class="arrow">➔</span>
+            </button>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- RIGHT COLUMN: Sticky Live Digital Preview Monitor -->
+      <aside class="preview-monitor-stage">
+        <div class="preview-monitor-card glass-card cyan-border" id="preview-monitor-card">
+          
+          <!-- Monitor Header Bar -->
+          <div class="monitor-top-bar">
+            <div class="monitor-status">
+              <span class="monitor-dot" id="monitor-dot"></span>
+              <span id="monitor-sys-tag">SYS_PREVIEW // PROJECT_01</span>
+            </div>
+            <span class="monitor-spec">LIVE TELEMETRY</span>
+          </div>
+
+          <!-- Dynamic Content Wrapper with Smooth Crossfade -->
+          <div class="preview-content-wrapper" id="preview-content-wrapper">
+            
+            <!-- 1. PROJECT IDENTITY LAYER -->
+            <div class="preview-identity-block">
+              <span class="preview-cat-badge" id="preview-category">AI / ML • COMPUTER VISION</span>
+              <h3 class="preview-project-title" id="preview-title">DERMTRACK</h3>
+              <p class="preview-project-sub" id="preview-subtitle">AI Skin Health Monitoring</p>
+            </div>
+
+            <!-- 2. TECHNICAL VISUAL SYSTEM REPRESENTATION LAYER -->
+            <div class="monitor-canvas-box">
+              <div class="monitor-grid-overlay"></div>
+              
+              <div class="preview-visual-display" id="preview-visual-display">
+                <div class="visual-flow-container" id="visual-flow-container">
+                  <div class="flow-pill">IMAGE</div>
+                  <span class="flow-arr">➔</span>
+                  <div class="flow-pill">MOBILENETV2</div>
+                  <span class="flow-arr">➔</span>
+                  <div class="flow-pill">FEATURES</div>
+                  <span class="flow-arr">➔</span>
+                  <div class="flow-pill">LSTM / RNN</div>
+                  <span class="flow-arr">➔</span>
+                  <div class="flow-pill cyan-glow">PROGRESSION</div>
+                </div>
+              </div>
+
+              <!-- Ambient Edge Glow -->
+              <div class="preview-glow-edge" id="preview-glow-edge"></div>
+            </div>
+
+            <!-- 3. TECHNICAL INFORMATION & STATUS LAYER -->
+            <div class="monitor-spec-panel">
+              <div class="spec-col">
+                <span class="spec-lbl">SYSTEM ARCHITECTURE</span>
+                <span class="spec-val" id="spec-arch">CNN + LSTM / RNN</span>
+              </div>
+              <div class="spec-col">
+                <span class="spec-lbl">STATUS</span>
+                <span class="spec-val spec-cyan" id="spec-status">CASE STUDY AVAILABLE</span>
+              </div>
+            </div>
+
+            <!-- DYNAMIC CASE STUDY ACTION BUTTON -->
+            <div class="preview-action-block">
+              <a href="/projects/dermtrack.html" class="preview-case-btn" id="preview-case-btn">
+                <span>VIEW CASE STUDY</span>
+                <span class="arrow">➔</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </aside>
+
+    </div>
+
+    <!-- Contact Banner Footer -->
+    <div class="cta-banner glass-card">
+      <div class="cta-text-group">
+        <span class="cta-tag">HAVE AN IDEA?</span>
+        <h2 class="cta-heading">LET'S <span class="year-accent">BUILD SOMETHING.</span></h2>
+        <p class="cta-sub">Have an idea or want to work together? Feel free to reach out via email.</p>
+      </div>
+
+      <div class="cta-buttons-group">
+        <a href="/contact.html" class="cta-btn primary-cta">
+          <span>GET IN TOUCH</span> ➔
+        </a>
+      </div>
+    </div>
+
+    <!-- Main Footer -->
+    <footer class="main-footer">
+      <div class="footer-left">
+        <span class="footer-brand">DHEERAJ KOLLI</span>
+        <span class="footer-location">📍 Rajahmundry, AP, India</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-copy">© Dheeraj Kolli. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <!-- Editorial Case Study Modal View -->
+  <div id="case-study-modal" class="modal-overlay">
+    <div class="modal-content glass-card case-study-modal-card">
+      
+      <!-- Top Bar Header with Close Button -->
+      <div class="cs-modal-top-bar">
+        <div class="cs-modal-category-group">
+          <span class="cs-modal-badge">• PROJECT CASE STUDY</span>
+          <span id="cs-modal-tag" class="cs-modal-tag"></span>
+        </div>
+        <button class="modal-close" id="modal-close" aria-label="Close Case Study">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Main Project Title -->
+      <h2 id="cs-modal-title" class="cs-modal-title"></h2>
+
+      <!-- Editorial Case Study Body -->
+      <div class="cs-modal-body">
+        
+        <!-- Section 01 -->
+        <div class="cs-editorial-block">
+          <div class="cs-block-header">
+            <span class="cs-num-accent">01 —</span>
+            <h3 class="cs-label">OVERVIEW & PROBLEM</h3>
+          </div>
+          <p id="cs-modal-problem" class="cs-text-content"></p>
+        </div>
+
+        <!-- Section 02 -->
+        <div class="cs-editorial-block">
+          <div class="cs-block-header">
+            <span class="cs-num-accent">02 —</span>
+            <h3 class="cs-label">APPROACH & ARCHITECTURE</h3>
+          </div>
+          <p id="cs-modal-approach" class="cs-text-content"></p>
+        </div>
+
+        <!-- Section 03 -->
+        <div class="cs-editorial-block">
+          <div class="cs-block-header">
+            <span class="cs-num-accent">03 —</span>
+            <h3 class="cs-label">TECHNOLOGIES & TOOLS</h3>
+          </div>
+          <div id="cs-modal-tech" class="cat-tags cs-tech-tags"></div>
+        </div>
+
+        <!-- Section 04 -->
+        <div class="cs-editorial-block">
+          <div class="cs-block-header">
+            <span class="cs-num-accent">04 —</span>
+            <h3 class="cs-label">MY CONTRIBUTION</h3>
+          </div>
+          <p id="cs-modal-contribution" class="cs-text-content"></p>
+        </div>
+
+      </div>
+
+      <!-- Unified Bottom Navigation Footer Row -->
+      <div class="cs-modal-footer">
+        <button id="cs-prev-btn" class="cs-nav-btn secondary-nav-btn">
+          ← PREVIOUS
+        </button>
+        
+        <a id="cs-github-link" href="/contact.html" class="cs-github-primary-btn">
+          <span>GET IN TOUCH</span> ✉
+        </a>
+        
+        <button id="cs-next-btn" class="cs-nav-btn secondary-nav-btn">
+          NEXT →
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="/projects.js"></script>
+</body>
+</html>

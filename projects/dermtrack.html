@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DermTrack — AI Skin Disease Monitoring | Dheeraj Kolli</title>
+  <meta name="description" content="DermTrack is a hybrid CNN-RNN framework for longitudinal tracking and progression analysis of dermatological conditions by Dheeraj Kolli.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="case-study-body">
+
+  <!-- Atmospheric Overlay -->
+  <div class="atmospheric-overlay"></div>
+
+  <!-- Top Header Navigation (Fixed Top - z-index 1000) -->
+  <header class="top-header">
+    <a href="/" class="brand-logo" id="brand-logo">
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 20H45V80H20V20Z" fill="#00E5FF"/>
+        <path d="M55 20L85 50L55 80V20Z" fill="white"/>
+      </svg>
+      <span class="logo-text">DK</span>
+    </a>
+
+    <!-- Floating Navigation Pill -->
+    <nav class="floating-nav" id="floating-nav">
+      <a href="/" class="nav-pill">HOME</a>
+      <a href="/about.html" class="nav-pill">ABOUT</a>
+      <a href="/projects.html" class="nav-pill active">PROJECTS</a>
+      <a href="/contact.html" class="nav-pill">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main Case Study Container -->
+  <main class="case-study-container">
+    
+    <!-- 1. HERO SECTION -->
+    <header class="case-hero-block">
+      <div class="case-badge animate-fade">
+        <span class="badge-square"></span>
+        <span>AI CASE STUDY / MEDICAL INTELLIGENCE</span>
+      </div>
+
+      <h1 class="case-main-title animate-fade">DERMTRACK</h1>
+      <p class="case-subtitle animate-fade-delay-1">Intelligent Skin Health Monitoring</p>
+      
+      <div class="case-tech-title animate-fade-delay-1">
+        A Hybrid CNN-RNN Framework for Longitudinal Tracking and Progression Analysis of Dermatological Conditions
+      </div>
+
+      <!-- Spec Header Bar -->
+      <div class="case-specs-bar glass-card animate-fade-delay-2">
+        <div class="spec-bar-item">
+          <span class="spec-lbl">DEVELOPER</span>
+          <span class="spec-val cyan">DHEERAJ KOLLI</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">ROLE</span>
+          <span class="spec-val">AI / ML • Computer Vision • Full-Stack</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">DATASET</span>
+          <span class="spec-val">HAM10000</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">MODEL</span>
+          <span class="spec-val">MobileNetV2 + LSTM</span>
+        </div>
+      </div>
+
+      <!-- Abstract Architectural Visual Stage -->
+      <div class="case-hero-visual glass-card animate-fade-delay-3">
+        <div class="visual-header">
+          <span class="visual-tag">STAGE // HYBRID AI LONGITUDINAL PIPELINE</span>
+          <span class="visual-status">● LIVE NEURAL SIMULATION</span>
+        </div>
+
+        <div class="hero-pipeline-nodes">
+          <div class="pipeline-node pulse-glow">
+            <span class="p-icon">🖼️</span>
+            <span class="p-label">IMAGE CAPTURE</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">🧠</span>
+            <span class="p-label">MOBILENETV2 (CNN)</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">📊</span>
+            <span class="p-label">1280-D FEATURE VECTOR</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">⏱️</span>
+            <span class="p-label">LSTM (RNN) TEMPORAL</span>
+          </div>
+          <div class="pipeline-arrow">➔</div>
+          <div class="pipeline-node success-node">
+            <span class="p-icon">📈</span>
+            <span class="p-label">PROGRESSION INSIGHT</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. PROJECT OVERVIEW -->
+    <section class="case-section-block">
+      <div class="section-label">01 — PROJECT OVERVIEW</div>
+      <h2 class="section-heading">BEYOND ISOLATED SNAPSHOTS</h2>
+      
+      <p class="section-lead-paragraph">
+        DermTrack is an AI-powered application designed for longitudinal tracking of dermatological conditions.
+        The central idea is to move beyond analyzing a single skin image as an isolated event.
+      </p>
+
+      <div class="three-pillar-grid">
+        <div class="pillar-card glass-card">
+          <span class="pillar-num">01</span>
+          <h3 class="pillar-title">IMAGE DATA</h3>
+          <p class="pillar-desc">High-resolution spatial feature extraction captured over periodic intervals.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num">02</span>
+          <h3 class="pillar-title">TIME / SEQUENCES</h3>
+          <p class="pillar-desc">Sequential temporal modeling tracking condition dynamics across time.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num">03</span>
+          <h3 class="pillar-title">SYMPTOM LOGGING</h3>
+          <p class="pillar-desc">Patient-reported metrics such as pain and itch intensity integrated into temporal analysis.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE PROBLEM -->
+    <section class="case-section-block">
+      <div class="section-label">02 — THE PROBLEM</div>
+      <h2 class="section-heading">CHALLENGES IN SKIN CONDITION MONITORING</h2>
+
+      <div class="problems-grid">
+        <div class="problem-card glass-card">
+          <span class="prob-num">01</span>
+          <h3 class="prob-title">SUBJECTIVE TRACKING</h3>
+          <p class="prob-desc">Patients struggle to accurately describe changes in their skin conditions over time, relying heavily on memory and perception.</p>
+        </div>
+        <div class="problem-card glass-card">
+          <span class="prob-num">02</span>
+          <h3 class="prob-title">SPORADIC DATA</h3>
+          <p class="prob-desc">Clinical visits provide isolated points of observation and may miss critical progression changes between appointments.</p>
+        </div>
+        <div class="problem-card glass-card">
+          <span class="prob-num">03</span>
+          <h3 class="prob-title">LACK OF OBJECTIVITY</h3>
+          <p class="prob-desc">Without longitudinal information, determining whether a condition is improving, worsening, or remaining stable is difficult.</p>
+        </div>
+      </div>
+
+      <!-- Visual Statement Banner -->
+      <div class="visual-statement-banner glass-card">
+        <div class="stmt-side">
+          <span class="stmt-lbl">TRADITIONAL APPROACH</span>
+          <span class="stmt-val">FROM ISOLATED SNAPSHOTS</span>
+        </div>
+        <div class="stmt-arrow">↓</div>
+        <div class="stmt-side cyan">
+          <span class="stmt-lbl">DERMTRACK APPROACH</span>
+          <span class="stmt-val">TO A LONGITUDINAL PROGRESSION STORY</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE SOLUTION -->
+    <section class="case-section-block">
+      <div class="section-label">03 — THE SOLUTION</div>
+      <h2 class="section-heading">THE DERMTRACK APPROACH</h2>
+      <p class="section-lead-paragraph">A mobile AI-powered platform for data-driven skin health progression tracking.</p>
+
+      <div class="solution-steps-grid">
+        <div class="sol-step-card glass-card">
+          <span class="step-badge">01</span>
+          <h3 class="step-title">LOG</h3>
+          <p class="step-desc">Users capture periodic photos of their condition and log associated symptoms such as itch and pain.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge">02</span>
+          <h3 class="step-title">ANALYZE</h3>
+          <p class="step-desc">The hybrid AI model analyzes visual information and temporal sequences.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge">03</span>
+          <h3 class="step-title">VISUALIZE</h3>
+          <p class="step-desc">The system generates a data-driven timeline representing progression states: <strong>IMPROVING</strong>, <strong>WORSENING</strong>, or <strong>STATIC</strong>.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CORE CONCEPT -->
+    <section class="case-section-block">
+      <div class="section-label">04 — CORE CONCEPT</div>
+      <h2 class="section-heading">IMAGE + TIME + SYMPTOMS → PROGRESSION INSIGHT</h2>
+
+      <div class="core-concept-stage glass-card">
+        <div class="concept-column">
+          <span class="concept-tag">CNN</span>
+          <h3 class="concept-title">SPATIAL INTELLIGENCE</h3>
+          <p class="concept-quote">"What is visible in the image?"</p>
+        </div>
+
+        <div class="concept-plus">+</div>
+
+        <div class="concept-column">
+          <span class="concept-tag purple">LSTM / RNN</span>
+          <h3 class="concept-title">TEMPORAL INTELLIGENCE</h3>
+          <p class="concept-quote">"How is it changing over time?"</p>
+        </div>
+
+        <div class="concept-plus">=</div>
+
+        <div class="concept-column cyan">
+          <span class="concept-tag cyan">DERMTRACK</span>
+          <h3 class="concept-title">LONGITUDINAL INSIGHT</h3>
+          <p class="concept-quote">Combines spatial and temporal intelligence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SYSTEM ARCHITECTURE -->
+    <section class="case-section-block">
+      <div class="section-label">05 — SYSTEM ARCHITECTURE</div>
+      <h2 class="section-heading">END-TO-END TECHNICAL ARCHITECTURE</h2>
+
+      <div class="architecture-diagram-container glass-card">
+        <div class="arch-flow">
+          <div class="arch-node">
+            <span class="arch-title">IMAGE CAPTURE</span>
+            <span class="arch-sub">Periodic Photos</span>
+          </div>
+          <div class="arch-line"></div>
+          <div class="arch-node">
+            <span class="arch-title">IMAGE PREPROCESSING</span>
+            <span class="arch-sub">Standardization & Resizing</span>
+          </div>
+          <div class="arch-line"></div>
+          <div class="arch-node cyan">
+            <span class="arch-title">MOBILENETV2 (CNN)</span>
+            <span class="arch-sub">Spatial Transfer Learning</span>
+          </div>
+          <div class="arch-line"></div>
+          <div class="arch-node">
+            <span class="arch-title">1280-D FEATURE VECTOR</span>
+            <span class="arch-sub">Visual Embeddings</span>
+          </div>
+        </div>
+
+        <div class="arch-fusion-bridge">
+          <div class="bridge-line"></div>
+          <div class="bridge-label">+ SYMPTOM METADATA (Pain / Itch Logs)</div>
+          <div class="bridge-line"></div>
+        </div>
+
+        <div class="arch-flow">
+          <div class="arch-node purple">
+            <span class="arch-title">LSTM / RNN</span>
+            <span class="arch-sub">Sequence Modeling</span>
+          </div>
+          <div class="arch-line"></div>
+          <div class="arch-node">
+            <span class="arch-title">TEMPORAL ANALYSIS</span>
+            <span class="arch-sub">Longitudinal Trends</span>
+          </div>
+          <div class="arch-line"></div>
+          <div class="arch-node green">
+            <span class="arch-title">PROGRESSION INSIGHT</span>
+            <span class="arch-sub">Improving / Static / Worsening</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CNN vs LSTM DEEP DIVE -->
+    <section class="case-section-block">
+      <div class="section-label">06 — NEURAL MODULES</div>
+      <h2 class="section-heading">SPATIAL & TEMPORAL INTELLIGENCE</h2>
+
+      <div class="dual-module-grid">
+        <!-- CNN MobileNetV2 -->
+        <div class="module-card glass-card">
+          <span class="mod-num">01</span>
+          <h3 class="mod-title">SPATIAL INTELLIGENCE</h3>
+          <span class="mod-sub">CNN / MobileNetV2</span>
+          <p class="mod-desc">A CNN processes individual dermatological images and extracts visual features. MobileNetV2 is utilized for transfer learning, outputting 1,280-dimensional feature vectors per image frame.</p>
+          <div class="mod-vis">
+            <span>IMAGE</span> ➔ <span>MOBILENETV2</span> ➔ <span class="cyan">1280-D VECTOR</span>
+          </div>
+        </div>
+
+        <!-- LSTM / RNN -->
+        <div class="module-card glass-card">
+          <span class="mod-num">02</span>
+          <h3 class="mod-title">TEMPORAL INTELLIGENCE</h3>
+          <span class="mod-sub">LSTM / RNN</span>
+          <p class="mod-desc">An RNN using LSTM cells models temporal progression over sequences of image-derived feature vectors and associated symptom metadata across multiple time steps.</p>
+          <div class="mod-vis">
+            <span>IMAGE SEQUENCE</span> ➔ <span>LSTM CELL</span> ➔ <span class="purple">TEMPORAL PATTERN</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8. DATASET & PREPROCESSING -->
+    <section class="case-section-block">
+      <div class="section-label">07 — DATASET & PIPELINE</div>
+      <h2 class="section-heading">DATASET & PREPROCESSING</h2>
+
+      <div class="dataset-info-card glass-card">
+        <div class="ds-header">
+          <span class="ds-title">DATASET IDENTIFIER:</span>
+          <span class="ds-name cyan">HAM10000</span>
+        </div>
+        <p class="ds-desc">Multi-source dermatoscopic images utilized for training spatial feature representations and verifying feature extraction pipelines.</p>
+      </div>
+
+      <div class="pipeline-wrapper glass-card">
+        <span class="pipe-label">PREPROCESSING PIPELINE</span>
+        <div class="pipeline-steps">
+          <div class="p-step">RAW IMAGE</div>
+          <div class="p-arrow">➔</div>
+          <div class="p-step">STANDARDIZATION & RESIZING</div>
+          <div class="p-arrow">➔</div>
+          <div class="p-step">PIXEL NORMALIZATION</div>
+          <div class="p-arrow">➔</div>
+          <div class="p-step">DATA AUGMENTATION</div>
+          <div class="p-arrow">➔</div>
+          <div class="p-step cyan">MODEL INPUT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. TECHNOLOGIES STACK -->
+    <section class="case-section-block">
+      <div class="section-label">08 — TECH STACK</div>
+      <h2 class="section-heading">TECHNOLOGIES & TOOLS</h2>
+
+      <div class="tech-badges-grid">
+        <span class="tech-badge">PYTHON</span>
+        <span class="tech-badge">PYTORCH</span>
+        <span class="tech-badge">MOBILENETV2</span>
+        <span class="tech-badge">CNN</span>
+        <span class="tech-badge">RNN</span>
+        <span class="tech-badge">LSTM</span>
+        <span class="tech-badge">OPENCV</span>
+        <span class="tech-badge">FLASK</span>
+      </div>
+    </section>
+
+    <!-- 10. MODEL RESULTS -->
+    <section class="case-section-block">
+      <div class="section-label">09 — EVALUATION</div>
+      <h2 class="section-heading">MODEL EVALUATION & METRICS</h2>
+
+      <div class="metrics-grid">
+        <div class="metric-card glass-card">
+          <span class="metric-val cyan">89%</span>
+          <span class="metric-label">CNN CLASSIFICATION ACCURACY</span>
+        </div>
+        <div class="metric-card glass-card">
+          <span class="metric-val purple">92%</span>
+          <span class="metric-label">LSTM TEMPORAL PRECISION</span>
+        </div>
+        <div class="metric-card glass-card">
+          <span class="metric-val green">87%</span>
+          <span class="metric-label">ENSEMBLE MODEL PERFORMANCE</span>
+        </div>
+      </div>
+
+      <div class="disclaimer-note">
+        * Reported project evaluation metrics; not a substitute for clinical validation.
+      </div>
+    </section>
+
+    <!-- 11. STATIC VS LONGITUDINAL COMPARISON -->
+    <section class="case-section-block">
+      <div class="section-label">10 — COMPARISON</div>
+      <h2 class="section-heading">FROM STATIC CLASSIFICATION TO LONGITUDINAL ANALYSIS</h2>
+
+      <div class="comparison-grid">
+        <div class="comp-col glass-card static-col">
+          <h3 class="comp-title">STATIC APPROACH</h3>
+          <ul class="comp-list">
+            <li>Single image snapshot</li>
+            <li>Isolated classification</li>
+            <li>One-time result without history</li>
+          </ul>
+        </div>
+
+        <div class="comp-col glass-card dermtrack-col">
+          <span class="comp-badge">DERMTRACK APPROACH</span>
+          <h3 class="comp-title cyan">LONGITUDINAL AI</h3>
+          <ul class="comp-list">
+            <li>Image sequence over time</li>
+            <li>Patient-reported symptom integration</li>
+            <li>CNN spatial + LSTM temporal modeling</li>
+            <li>Dynamic progression trend insight</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 12. MY ROLE -->
+    <section class="case-section-block">
+      <div class="section-label">11 — CREDITS</div>
+      <h2 class="section-heading">MY ROLE</h2>
+
+      <div class="role-card glass-card">
+        <h3 class="role-name">DHEERAJ KOLLI</h3>
+        <span class="role-title cyan">AI / ML • Computer Vision • Full-Stack Development</span>
+        <p class="role-desc">"Designed and developed DermTrack as a hybrid AI-powered approach for longitudinal skin-condition monitoring."</p>
+      </div>
+    </section>
+
+    <!-- 13. FUTURE DIRECTIONS -->
+    <section class="case-section-block">
+      <div class="section-label">12 — ROADMAP</div>
+      <h2 class="section-heading">FUTURE DEVELOPMENT</h2>
+
+      <div class="future-grid">
+        <div class="future-card glass-card">
+          <span class="f-num">01</span>
+          <h4 class="f-title">EXPANDED CONDITIONS</h4>
+          <p class="f-desc">Support a wider range of dermatological conditions.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num">02</span>
+          <h4 class="f-title">PREDICTIVE ANALYTICS</h4>
+          <p class="f-desc">Explore predictive models for flare-ups or treatment non-response.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num">03</span>
+          <h4 class="f-title">EHR INTEGRATION</h4>
+          <p class="f-desc">Potential integration with Electronic Health Records.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num">04</span>
+          <h4 class="f-title">MOBILE APP EXPANSION</h4>
+          <p class="f-desc">Further development of the native mobile application experience.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num">05</span>
+          <h4 class="f-title">WEARABLE SENSOR DATA</h4>
+          <p class="f-desc">Potential integration of wearable sensor telemetry.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 14. PROJECT NAVIGATION FOOTER -->
+    <nav class="project-nav-row">
+      <a href="/projects.html" class="proj-nav-btn">
+        <span class="arrow">←</span> PREVIOUS PROJECT
+      </a>
+      <a href="/projects.html" class="proj-nav-btn main-back-btn">
+        BACK TO ALL PROJECTS
+      </a>
+      <a href="/projects/solarpro.html" class="proj-nav-btn">
+        NEXT PROJECT <span class="arrow">→</span>
+      </a>
+    </nav>
+
+    <!-- Minimal Main Footer -->
+    <footer class="main-footer">
+      <div class="footer-left">
+        <span class="footer-brand">DHEERAJ KOLLI</span>
+        <span class="footer-location">📍 Rajahmundry, AP, India</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-copy">© Dheeraj Kolli. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/projects/dermtrack.js"></script>
+</body>
+</html>

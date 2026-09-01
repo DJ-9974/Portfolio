@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dheeraj Kolli — AI & Full-Stack Developer</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loader" class="loader">
+    <div class="loader-content">
+      <div class="spinner"></div>
+      <div class="loader-brand">DHEERAJ KOLLI</div>
+      <div class="loader-tagline">AI • FULL-STACK • CREATIVE TECHNOLOGY</div>
+      <div class="loader-text">INITIALIZING EXPERIENCE <span id="progress-text">0%</span></div>
+      <div class="progress-bar">
+        <div id="progress-fill" class="progress-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Atmospheric Vignette Layer (z-index 2) -->
+  <div class="atmospheric-overlay"></div>
+
+  <!-- Dynamic Scroll to Explore Overlay (Pinned over bottom-right embedded Gemini sparkle icon - z-index 90) -->
+  <div class="scroll-explore-overlay" id="scroll-explore" data-target="#about">
+    <div class="scroll-mouse-icon">
+      <div class="mouse-wheel-dot"></div>
+    </div>
+    <div class="scroll-text-group">
+      <span class="scroll-label">SCROLL</span>
+      <span class="explore-label">TO EXPLORE</span>
+    </div>
+    <div class="scroll-chevron">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d946ef" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Top Navigation Header (Fixed Top - z-index 1000) -->
+  <header class="top-header">
+    <a href="/" class="brand-logo" id="brand-logo">
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 20H45V80H20V20Z" fill="#00E5FF"/>
+        <path d="M55 20L85 50L55 80V20Z" fill="white"/>
+      </svg>
+      <span class="logo-text">DK</span>
+    </a>
+
+    <!-- Floating Navigation Pill -->
+    <nav class="floating-nav" id="floating-nav">
+      <a href="/" class="nav-pill active">HOME</a>
+      <a href="/about.html" class="nav-pill">ABOUT</a>
+      <a href="/projects.html" class="nav-pill">PROJECTS</a>
+      <a href="/contact.html" class="nav-pill">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Canvas Scroll Viewport (Fixed Background - z-index 1) -->
+  <div class="scroll-container" id="scroll-container">
+    <div class="canvas-wrapper">
+      <canvas id="sequence-canvas"></canvas>
+    </div>
+
+    <!-- Portfolio Content Overlay Layer (z-index 3) -->
+    <div class="content-overlay">
+
+      <!-- SECTION 1: HERO (No glass panel background behind title; face remains 100% unobscured) -->
+      <section id="hero" class="content-section hero-section">
+        <div class="hero-clean-title-group">
+          <div class="creator-badge">
+            <span class="badge-square"></span>
+            <span class="badge-text">B.TECH CSE (2023 — 2027) • VIT-AP UNIVERSITY</span>
+          </div>
+          <h1 class="hero-main-title">DHEERAJ <span class="year-accent">KOLLI</span></h1>
+          <p class="hero-subtitle">AI / MACHINE LEARNING • FULL-STACK DEVELOPMENT • CREATIVE TECHNOLOGY</p>
+          <p class="hero-statement">"Building intelligent systems and immersive digital experiences."</p>
+
+        </div>
+      </section>
+
+      <!-- SECTION: WHAT I BUILD (Professional Identity & Core Domains) -->
+      <section id="what-i-build" class="content-section what-i-build-section">
+        <div class="section-container">
+          
+          <div class="section-header-block">
+            <span class="section-num">01 — PROFESSIONAL IDENTITY</span>
+            <h2 class="section-title">WHAT I <span class="year-accent">BUILD</span></h2>
+            <p class="section-lead-statement">
+              "I build intelligent systems, interactive applications, and technology-driven solutions."
+            </p>
+          </div>
+
+          <!-- Asymmetrical 3-Category Editorial Composition Grid -->
+          <div class="build-categories-grid">
+            
+            <!-- Category 01: AI / MACHINE LEARNING -->
+            <article class="build-category-card glass-card cyan-category" data-category="ai">
+              <div class="build-cat-header">
+                <span class="cat-num">01</span>
+                <div class="cat-title-group">
+                  <span class="cat-tag cyan">AI / MACHINE LEARNING</span>
+                  <h3 class="cat-main-title">INTELLIGENT VISION & SEQUENCES</h3>
+                </div>
+              </div>
+
+              <p class="cat-description">
+                Computer Vision • Deep Learning • PyTorch • CNN / RNN / LSTM • Model Development
+              </p>
+
+              <div class="cat-visual-box cyan-box">
+                <div class="mini-flow">
+                  <span>IMAGE</span> ➔ <span>MOBILENETV2</span> ➔ <span>LSTM</span> ➔ <span class="cyan">PROGRESSION</span>
+                </div>
+              </div>
+
+              <div class="cat-footer">
+                <div class="cat-project-link">
+                  <span class="proj-ref-lbl">FEATURED PROJECT</span>
+                  <span class="proj-ref-name">DERMTRACK</span>
+                </div>
+                <a href="/projects/dermtrack.html" class="build-explore-btn cyan-btn">
+                  <span>EXPLORE</span> <span class="arrow">➔</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Category 02: FULL-STACK DEVELOPMENT -->
+            <article class="build-category-card glass-card red-category" data-category="fullstack">
+              <div class="build-cat-header">
+                <span class="cat-num">02</span>
+                <div class="cat-title-group">
+                  <span class="cat-tag red">FULL-STACK DEVELOPMENT</span>
+                  <h3 class="cat-main-title">WEB & EMERGENCY PLATFORMS</h3>
+                </div>
+              </div>
+
+              <p class="cat-description">
+                Web Applications • Frontend Development • Backend Integration • Interactive Interfaces • System Design
+              </p>
+
+              <div class="cat-visual-box red-box">
+                <div class="mini-flow">
+                  <span>REPORT</span> + <span>VOLUNTEER</span> + <span>EMERGENCY</span> ➔ <span class="red">CRISIS PLATFORM</span>
+                </div>
+              </div>
+
+              <div class="cat-footer">
+                <div class="cat-project-link">
+                  <span class="proj-ref-lbl">FEATURED PROJECT</span>
+                  <span class="proj-ref-name">CRISIS RESPONSE MANAGEMENT</span>
+                </div>
+                <a href="/projects/crisis-response.html" class="build-explore-btn red-btn">
+                  <span>EXPLORE</span> <span class="arrow">➔</span>
+                </a>
+              </div>
+            </article>
+
+            <!-- Category 03: SYSTEMS / IOT -->
+            <article class="build-category-card glass-card amber-category" data-category="systems">
+              <div class="build-cat-header">
+                <span class="cat-num">03</span>
+                <div class="cat-title-group">
+                  <span class="cat-tag amber">SYSTEMS / IOT</span>
+                  <h3 class="cat-main-title">HARDWARE & SOLAR TELEMETRY</h3>
+                </div>
+              </div>
+
+              <p class="cat-description">
+                Hardware + Software • IoT Concepts • Embedded Systems • Real-Time Monitoring • Automation
+              </p>
+
+              <div class="cat-visual-box amber-box">
+                <div class="mini-flow">
+                  <span>SUN</span> ➔ <span>LDR</span> ➔ <span>ARDUINO</span> ➔ <span>SERVO</span> ➔ <span class="amber">TELEMETRY</span>
+                </div>
+              </div>
+
+              <div class="cat-footer">
+                <div class="cat-project-link">
+                  <span class="proj-ref-lbl">FEATURED PROJECT</span>
+                  <span class="proj-ref-name">SOLARPRO</span>
+                </div>
+                <a href="/projects/solarpro.html" class="build-explore-btn amber-btn">
+                  <span>EXPLORE</span> <span class="arrow">➔</span>
+                </a>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- Tech Stack Badges -->
+          <div class="tech-stack-badges-block glass-card">
+            <span class="tech-stack-lbl">CATEGORIZED TECH STACK</span>
+            <div class="tech-badges-row">
+              <span class="tech-badge cyan-badge">Python</span>
+              <span class="tech-badge cyan-badge">PyTorch</span>
+              <span class="tech-badge cyan-badge">MobileNetV2</span>
+              <span class="tech-badge cyan-badge">CNN</span>
+              <span class="tech-badge cyan-badge">RNN</span>
+              <span class="tech-badge cyan-badge">LSTM</span>
+              <span class="tech-badge cyan-badge">OpenCV</span>
+              <span class="tech-badge blue-badge">Flask</span>
+              <span class="tech-badge blue-badge">HTML</span>
+              <span class="tech-badge blue-badge">CSS</span>
+              <span class="tech-badge amber-badge">Arduino</span>
+            </div>
+            <p class="personal-positioning-statement">
+              "Curious about intelligent systems, interactive experiences, and the intersection of software with the physical world."
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 2: ABOUT & FOCUS AREAS -->
+      <section id="about" class="content-section about-section">
+        <div class="section-container">
+          
+          <div class="section-header-block">
+            <span class="section-num">02 — ABOUT</span>
+            <h2 class="section-big-quote">"I BUILD THINGS THAT <span class="year-accent">ACTUALLY DO SOMETHING.</span>"</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="glass-card bio-card">
+              <h3 class="card-heading">BIOGRAPHY</h3>
+              <p class="about-description">
+                Computer Science undergraduate specializing in Artificial Intelligence, Cloud Computing, IoT, and Full-Stack Development. Driven by solving high-impact problems using computer vision, deep time-series neural networks, and scalable real-world software architecture.
+              </p>
+              
+              <div class="edu-subblock">
+                <span class="edu-tag">• EDUCATION</span>
+                <div class="edu-title">VIT-AP University</div>
+                <div class="edu-desc">B.Tech in Computer Science & Engineering (2023 — 2027)</div>
+              </div>
+            </div>
+
+            <!-- Focus Domains -->
+            <div class="glass-card domains-card">
+              <h3 class="card-heading">ENGINEERING DOMAINS</h3>
+              <div class="domains-list">
+                <div class="domain-item">
+                  <div class="domain-icon">🧠</div>
+                  <div>
+                    <h4>AI / MACHINE LEARNING</h4>
+                    <p>Computer Vision, Deep Learning, MobileNetV2, LSTM time-series progression.</p>
+                  </div>
+                </div>
+                <div class="domain-item">
+                  <div class="domain-icon">⚡</div>
+                  <div>
+                    <h4>FULL-STACK DEVELOPMENT</h4>
+                    <p>React, TypeScript, Node.js, Flask REST APIs, Modern Web Architecture.</p>
+                  </div>
+                </div>
+                <div class="domain-item">
+                  <div class="domain-icon">🌐</div>
+                  <div>
+                    <h4>SDN & NETWORKING</h4>
+                    <p>OpenFlow, Ryu Controllers, Mininet topology emulation, Open vSwitch.</p>
+                  </div>
+                </div>
+                <div class="domain-item">
+                  <div class="domain-icon">☁</div>
+                  <div>
+                    <h4>CLOUD & IoT SYSTEMS</h4>
+                    <p>AWS, ESP32 microcontrollers, dual-axis solar tracking, cloud telemetry.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Categorized Skills Grid -->
+          <div class="skills-section-block">
+            <h3 class="skills-header">CATEGORIZED TECH STACK</h3>
+            <div class="skills-category-grid">
+              
+              <div class="skill-cat-card glass-card">
+                <h4 class="cat-title">LANGUAGES</h4>
+                <div class="cat-tags">
+                  <span class="tag">Python</span>
+                  <span class="tag">JavaScript</span>
+                  <span class="tag">TypeScript</span>
+                  <span class="tag">C/C++</span>
+                  <span class="tag">Java</span>
+                  <span class="tag">SQL</span>
+                </div>
+              </div>
+
+              <div class="skill-cat-card glass-card">
+                <h4 class="cat-title">AI / ML & DEEP LEARNING</h4>
+                <div class="cat-tags">
+                  <span class="tag cyan">PyTorch</span>
+                  <span class="tag cyan">Computer Vision</span>
+                  <span class="tag cyan">MobileNetV2</span>
+                  <span class="tag cyan">LSTM</span>
+                  <span class="tag cyan">OpenCV</span>
+                </div>
+              </div>
+
+              <div class="skill-cat-card glass-card">
+                <h4 class="cat-title">FULL STACK & WEB</h4>
+                <div class="cat-tags">
+                  <span class="tag blue">React</span>
+                  <span class="tag blue">Flask</span>
+                  <span class="tag blue">Node.js</span>
+                  <span class="tag blue">HTML5/CSS3</span>
+                  <span class="tag blue">REST APIs</span>
+                </div>
+              </div>
+
+              <div class="skill-cat-card glass-card">
+                <h4 class="cat-title">NETWORKING & SYSTEMS</h4>
+                <div class="cat-tags">
+                  <span class="tag purple">OpenFlow</span>
+                  <span class="tag purple">Ryu</span>
+                  <span class="tag purple">Mininet</span>
+                  <span class="tag purple">Open vSwitch</span>
+                  <span class="tag purple">iPerf3</span>
+                </div>
+              </div>
+
+              <div class="skill-cat-card glass-card">
+                <h4 class="cat-title">CLOUD & TOOLS</h4>
+                <div class="cat-tags">
+                  <span class="tag amber">AWS (EC2/S3)</span>
+                  <span class="tag amber">Oracle Cloud</span>
+                  <span class="tag amber">Git / GitHub</span>
+                  <span class="tag amber">Docker</span>
+                  <span class="tag amber">Linux</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- About Section CTA Row -->
+          <div class="project-nav-row" style="margin-top: 32px; justify-content: flex-end;">
+            <a href="/about.html" class="proj-nav-btn main-back-btn">
+              ABOUT ME <span class="arrow">➔</span>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 3: SELECTED WORK TEASER -->
+      <section id="projects-teaser" class="content-section projects-section">
+        <div class="section-container">
+          
+          <div class="section-header-block">
+            <span class="section-num">02 — FEATURED TEASER</span>
+            <h2 class="section-title">SELECTED <span class="year-accent">WORK</span></h2>
+          </div>
+
+          <div class="case-studies-stack">
+            
+            <!-- Teaser 01: DermTrack -->
+            <article class="case-study-card glass-card">
+              <div class="case-header">
+                <span class="case-num">01</span>
+                <div>
+                  <h3 class="case-title">DermTrack — AI Skin Disease Monitoring</h3>
+                  <span class="case-tag">AI / Medical Vision • MobileNetV2 + LSTM</span>
+                </div>
+              </div>
+
+              <div class="case-grid">
+                <div class="case-details">
+                  <div class="case-subblock">
+                    <h4>OVERVIEW</h4>
+                    <p>Dual-stage neural network architecture combining MobileNetV2 spatial feature extraction with LSTM temporal networks for tracking skin lesion progression over time.</p>
+                  </div>
+                  <div class="case-subblock">
+                    <h4>TECHNOLOGY STACK</h4>
+                    <div class="cat-tags">
+                      <span class="tag cyan">PyTorch</span>
+                      <span class="tag cyan">MobileNetV2</span>
+                      <span class="tag cyan">LSTM</span>
+                      <span class="tag cyan">OpenCV</span>
+                      <span class="tag">Flask</span>
+                    </div>
+                  </div>
+                  <div class="case-actions">
+                    <a href="/projects.html#dermtrack" class="case-link-btn">
+                      VIEW CASE STUDY →
+                    </a>
+                  </div>
+                </div>
+
+                <div class="case-visual-preview dermtrack-gradient">
+                  <span class="case-watermark">DermTrack</span>
+                  <p class="case-visual-caption">Dual-Stage CNN + Temporal LSTM Neural Model</p>
+                </div>
+              </div>
+            </article>
+
+            <!-- Teaser 02: SolarPro -->
+            <article class="case-study-card glass-card">
+              <div class="case-header">
+                <span class="case-num">02</span>
+                <div>
+                  <h3 class="case-title">SolarPro — IoT Dual-Axis Solar Tracker</h3>
+                  <span class="case-tag">IoT & Embedded Systems • Telemetry Dashboard</span>
+                </div>
+              </div>
+
+              <div class="case-grid">
+                <div class="case-details">
+                  <div class="case-subblock">
+                    <h4>OVERVIEW</h4>
+                    <p>Automated solar tracking system with light-dependent sensor arrays and servo actuators controlled by ESP32 microcontrollers, coupled with a real-time web telemetry dashboard.</p>
+                  </div>
+                  <div class="case-subblock">
+                    <h4>TECHNOLOGY STACK</h4>
+                    <div class="cat-tags">
+                      <span class="tag amber">ESP32 / Arduino</span>
+                      <span class="tag amber">Sensors & Actuators</span>
+                      <span class="tag blue">React</span>
+                      <span class="tag blue">REST APIs</span>
+                    </div>
+                  </div>
+                  <div class="case-actions">
+                    <a href="/projects.html#solarpro" class="case-link-btn">
+                      VIEW CASE STUDY →
+                    </a>
+                  </div>
+                </div>
+
+                <div class="case-visual-preview solarpro-gradient">
+                  <span class="case-watermark">SolarPro</span>
+                  <p class="case-visual-caption">Dual-Axis Servo Actuation + Telemetry Cloud</p>
+                </div>
+              </div>
+            </article>
+
+          </div>
+
+          <!-- All Projects CTA Link -->
+          <div class="all-projects-cta-box glass-card">
+            <div class="all-projects-info">
+              <span class="all-projects-tag">EXPLORE FULL ARCHIVE</span>
+              <h3 class="all-projects-heading">WANT TO SEE MORE SYSTEMS & EXPERIMENTS?</h3>
+              <p class="all-projects-desc">View the complete collection including Disaster Response & SDN Network Traffic Controller.</p>
+            </div>
+            <a href="/projects.html" class="all-projects-btn">
+              <span>VIEW ALL PROJECTS (4)</span> ➔
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SECTION 4: EXPERIENCE & EDUCATION -->
+      <section id="experience" class="content-section experience-section">
+        <div class="section-container">
+          <div class="section-header-block">
+            <span class="section-num">03 — ACADEMICS & TIMELINE</span>
+            <h2 class="section-title">ACADEMIC & <span class="year-accent">TECHNICAL TIMELINE</span></h2>
+          </div>
+
+          <div class="timeline-container glass-card">
+            <div class="timeline-row">
+              <div class="timeline-left">
+                <span class="t-date">2023 — 2027</span>
+                <span class="t-badge">UNDERGRADUATE</span>
+              </div>
+              <div class="timeline-right">
+                <h4 class="t-title">VIT-AP UNIVERSITY</h4>
+                <p class="t-sub">B.Tech in Computer Science & Engineering</p>
+                <p class="t-text">Focused on Artificial Intelligence, Cloud Infrastructure, Systems Engineering, and Software Architecture.</p>
+              </div>
+            </div>
+
+            <div class="timeline-row">
+              <div class="timeline-left">
+                <span class="t-date">2024 — PRESENT</span>
+                <span class="t-badge">RESEARCH & DEV</span>
+              </div>
+              <div class="timeline-right">
+                <h4 class="t-title">AI VISION & IoT SYSTEMS DEVELOPMENT</h4>
+                <p class="t-sub">Independent Research & Software Systems</p>
+                <p class="t-text">Developing end-to-end deep learning models for medical vision (DermTrack) and dynamic telemetry software (SolarPro).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: CONTACT & FINAL CTA -->
+      <section id="contact" class="content-section contact-section">
+        <div class="section-container">
+          
+          <div class="cta-banner glass-card">
+            <div class="cta-text-group">
+              <span class="cta-tag">HAVE AN IDEA?</span>
+              <h2 class="cta-heading">LET'S <span class="year-accent">BUILD SOMETHING.</span></h2>
+              <p class="cta-sub">Have an idea or want to work together? Feel free to reach out via email.</p>
+            </div>
+
+            <div class="cta-buttons-group">
+              <a href="/contact.html" class="cta-btn primary-cta">
+                <span>SEND EMAIL</span> ✉
+              </a>
+            </div>
+          </div>
+
+          <!-- Clean Footer -->
+          <footer class="main-footer">
+            <div class="footer-left">
+              <span class="footer-brand">DHEERAJ KOLLI</span>
+              <span class="footer-location">📍 Rajahmundry, AP, India</span>
+            </div>
+            <div class="footer-right">
+              <span class="footer-copy">© Dheeraj Kolli. All rights reserved.</span>
+            </div>
+          </footer>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

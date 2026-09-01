@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Dheeraj Kolli</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="about-page-body">
+
+  <!-- Atmospheric Backdrop -->
+  <div class="atmospheric-overlay"></div>
+
+  <!-- Top Header Navigation (Fixed Top - z-index 1000) -->
+  <header class="top-header">
+    <a href="/" class="brand-logo" id="brand-logo">
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 20H45V80H20V20Z" fill="#00E5FF"/>
+        <path d="M55 20L85 50L55 80V20Z" fill="white"/>
+      </svg>
+      <span class="logo-text">DK</span>
+    </a>
+
+    <!-- Floating Navigation Pill -->
+    <nav class="floating-nav" id="floating-nav">
+      <a href="/" class="nav-pill">HOME</a>
+      <a href="/about.html" class="nav-pill active">ABOUT</a>
+      <a href="/projects.html" class="nav-pill">PROJECTS</a>
+      <a href="/contact.html" class="nav-pill">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main About Container -->
+  <main class="about-main-container">
+    
+    <!-- Hero Section: Biography + Physical Hanging ID Card Stage -->
+    <section class="about-hero-grid">
+      
+      <!-- LEFT COLUMN: Personal Biography & Info Blocks -->
+      <div class="about-bio-column">
+        <div class="about-badge animate-fade">
+          <span class="badge-square"></span>
+          <span>ABOUT ME</span>
+        </div>
+
+        <h1 class="about-title animate-fade-delay-1">
+          HI, I'M <br>
+          <span class="gradient-text">DHEERAJ KOLLI</span>
+        </h1>
+
+        <p class="about-lead-para animate-fade-delay-2">
+          I’m Dheeraj Kolli, a B.Tech CSE student at <strong class="highlight-cyan">VIT-AP University (2023–2027)</strong>, interested in building intelligent systems, interactive applications, and technology-driven solutions.
+        </p>
+
+        <p class="about-sub-para animate-fade-delay-2">
+          I enjoy working across AI/ML, computer vision, full-stack development, and systems-oriented projects, with a focus on turning ideas into practical working experiences.
+        </p>
+
+        <!-- Feature Stat Blocks -->
+        <div class="info-blocks-row animate-fade-delay-3">
+          <div class="info-block-card glass-card">
+            <div class="block-icon">📅</div>
+            <div class="block-value">2023 — 2027</div>
+            <div class="block-label">B.Tech CSE</div>
+            <div class="block-sub">VIT-AP University</div>
+          </div>
+
+          <div class="info-block-card glass-card">
+            <div class="block-icon">&lt;/&gt;</div>
+            <div class="block-value">FULL-STACK</div>
+            <div class="block-label">Developer</div>
+          </div>
+
+          <div class="info-block-card glass-card">
+            <div class="block-icon">🚀</div>
+            <div class="block-value">AI / ML</div>
+            <div class="block-label">Systems & Creative Tech</div>
+          </div>
+        </div>
+
+        <!-- Action CTA Button -->
+        <div class="about-action-group animate-fade-delay-4">
+          <a href="/projects.html" class="about-projects-btn">
+            <span class="dot-accent"></span>
+            <span>VIEW MY PROJECTS</span>
+            <span class="arrow">➔</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: Physical Hanging 3D ID Card Stage -->
+      <div class="id-card-stage-container">
+        
+        <!-- Lanyard Attachment Assembly (Visually extending from top of page) -->
+        <div class="lanyard-assembly" id="lanyard-assembly">
+          <div class="lanyard-top-extension"></div>
+          <div class="lanyard-strap"></div>
+          <div class="lanyard-ring"></div>
+          <div class="lanyard-clip"></div>
+        </div>
+
+        <!-- The Physical Hanging ID Card Component -->
+        <div class="id-card-wrapper" id="id-card-wrapper">
+          <div class="id-card-body glass-card" id="interactive-id-card">
+            
+            <!-- Glass Reflection Highlight Overlay -->
+            <div class="card-reflection" id="card-reflection"></div>
+            
+            <!-- Metallic Slot Cutout -->
+            <div class="card-slot"></div>
+
+            <!-- Portrait Photo Container -->
+            <div class="id-photo-frame">
+              <img src="/portrait.jpg" alt="Dheeraj Kolli Portrait" class="id-portrait-img">
+              <div class="photo-glow-border"></div>
+            </div>
+
+            <!-- ID Card Header Text -->
+            <div class="id-identity-group">
+              <h2 class="id-name">DHEERAJ KOLLI</h2>
+              <span class="id-role">AI / FULL-STACK DEVELOPER</span>
+            </div>
+
+            <!-- ID Card Detail Fields -->
+            <div class="id-details-list">
+              <div class="id-detail-item">
+                <span class="id-icon">🎓</span>
+                <div class="id-field-group">
+                  <span class="id-field-label">EDUCATION</span>
+                  <span class="id-field-val">B.Tech CSE • VIT-AP University (2023 — 2027)</span>
+                </div>
+              </div>
+
+              <div class="id-detail-item">
+                <span class="id-icon">🎯</span>
+                <div class="id-field-group">
+                  <span class="id-field-label">FOCUS</span>
+                  <span class="id-field-val">AI • Web Dev • Systems</span>
+                </div>
+              </div>
+
+              <div class="id-detail-item">
+                <span class="id-icon">📍</span>
+                <div class="id-field-group">
+                  <span class="id-field-label">LOCATION</span>
+                  <span class="id-field-val">Rajahmundry, AP, India</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Expanded Bio Drawer (Revealed dynamically on Pull / Click) -->
+            <div class="id-expanded-drawer" id="id-expanded-drawer">
+              <div class="drawer-divider"></div>
+              <div class="drawer-block">
+                <span class="drawer-label">TECHNICAL PHILOSOPHY</span>
+                <p class="drawer-text">Engineering robust, intelligent systems through clean modular architecture, deep neural vision models, and real-time telemetry pipelines.</p>
+              </div>
+
+              <div class="drawer-block">
+                <span class="drawer-label">CORE COMPETENCIES</span>
+                <div class="drawer-tags">
+                  <span class="tag cyan">Computer Vision</span>
+                  <span class="tag cyan">PyTorch</span>
+                  <span class="tag blue">React</span>
+                  <span class="tag blue">OpenFlow SDN</span>
+                  <span class="tag purple">Flask REST</span>
+                  <span class="tag amber">ESP32 IoT</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decorative Authentic Barcode Pattern -->
+            <div class="id-barcode-container">
+              <div class="barcode-lines"></div>
+              <span class="barcode-num">ID • DK-2027-VITAP</span>
+            </div>
+
+            <!-- Subtle Pull Hint Badge -->
+            <div class="pull-hint-container" id="pull-hint-container">
+              <span class="pull-hint-badge" id="pull-hint-badge">✥ PRESS & DRAG IN ANY DIRECTION</span>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- Section 2: Technical Domains & Categorized Tech Stack -->
+    <section class="about-section-block">
+      <div class="section-header-block">
+        <span class="section-num">01 — CURRENT FOCUS</span>
+        <h2 class="section-title">PRIMARY AREAS & <span class="year-accent">EXPLORATION</span></h2>
+      </div>
+
+      <div class="domains-grid">
+        <div class="domain-card glass-card">
+          <div class="domain-icon">🧠</div>
+          <h3>AI / MACHINE LEARNING</h3>
+          <p>Exploring computer vision and neural-network-based systems.</p>
+        </div>
+
+        <div class="domain-card glass-card">
+          <div class="domain-icon">⚡</div>
+          <h3>FULL-STACK DEVELOPMENT</h3>
+          <p>Building functional web experiences and connected interfaces.</p>
+        </div>
+
+        <div class="domain-card glass-card">
+          <div class="domain-icon">☁</div>
+          <h3>SYSTEMS / IOT</h3>
+          <p>Exploring the relationship between software, hardware and real-world systems.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Education & Timeline -->
+    <section class="about-section-block">
+      <div class="section-header-block">
+        <span class="section-num">02 — ACADEMICS</span>
+        <h2 class="section-title">EDUCATION & <span class="year-accent">TIMELINE</span></h2>
+      </div>
+
+      <div class="timeline-container glass-card">
+        <div class="timeline-row">
+          <div class="timeline-left">
+            <span class="t-date">2023 — 2027</span>
+            <span class="t-badge">UNDERGRADUATE</span>
+          </div>
+          <div class="timeline-right">
+            <h4 class="t-title">VIT-AP UNIVERSITY</h4>
+            <p class="t-sub">B.Tech in Computer Science & Engineering</p>
+            <p class="t-text">Specializing in Artificial Intelligence, Deep Learning, Cloud Systems, and Software Engineering Architecture.</p>
+          </div>
+        </div>
+    <!-- Contextual Navigation Row -->
+    <div class="project-nav-row" style="margin-top: 32px; margin-bottom: 24px;">
+      <a href="/" class="proj-nav-btn">
+        <span class="arrow">←</span> BACK TO HOME
+      </a>
+      <a href="/projects.html" class="proj-nav-btn main-back-btn">
+        EXPLORE MY PROJECTS <span class="arrow">➔</span>
+      </a>
+    </div>
+
+    <!-- Contact Banner CTA Footer -->
+    <div class="cta-banner glass-card">
+      <div class="cta-text-group">
+        <span class="cta-tag">HAVE AN IDEA?</span>
+        <h2 class="cta-heading">LET'S <span class="year-accent">BUILD SOMETHING.</span></h2>
+        <p class="cta-sub">Have an idea or want to work together? Feel free to reach out via email.</p>
+      </div>
+
+      <div class="cta-buttons-group">
+        <a href="/contact.html" class="cta-btn primary-cta">
+          <span>SEND EMAIL</span> ✉
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+      <div class="footer-left">
+        <span class="footer-brand">DHEERAJ KOLLI</span>
+        <span class="footer-location">📍 Rajahmundry, AP, India</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-copy">© Dheeraj Kolli. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/about.js"></script>
+</body>
+</html>

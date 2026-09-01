@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crisis Response Management — Dheeraj Kolli</title>
+  <meta name="description" content="A case study of Dheeraj Kolli's Crisis Response Management web platform for disaster reporting, volunteer coordination and emergency-response information.">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="case-study-body crisis-theme">
+
+  <!-- Atmospheric Overlay -->
+  <div class="atmospheric-overlay"></div>
+
+  <!-- Top Header Navigation (Fixed Top - z-index 1000) -->
+  <header class="top-header">
+    <a href="/" class="brand-logo" id="brand-logo">
+      <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 20H45V80H20V20Z" fill="#00E5FF"/>
+        <path d="M55 20L85 50L55 80V20Z" fill="white"/>
+      </svg>
+      <span class="logo-text">DK</span>
+    </a>
+
+    <!-- Floating Navigation Pill -->
+    <nav class="floating-nav" id="floating-nav">
+      <a href="/" class="nav-pill">HOME</a>
+      <a href="/about.html" class="nav-pill">ABOUT</a>
+      <a href="/projects.html" class="nav-pill active">PROJECTS</a>
+      <a href="/contact.html" class="nav-pill">CONTACT</a>
+    </nav>
+  </header>
+
+  <!-- Main Case Study Container -->
+  <main class="case-study-container">
+    
+    <!-- 1. HERO SECTION -->
+    <header class="case-hero-block">
+      <div class="case-badge animate-fade">
+        <span class="badge-square red-accent"></span>
+        <span>DIGITAL CRISIS RESPONSE × HUMAN COORDINATION × TECHNOLOGY</span>
+      </div>
+
+      <h1 class="case-main-title crisis-title animate-fade">CRISIS RESPONSE MANAGEMENT</h1>
+      <p class="case-subtitle animate-fade-delay-1">A Digital Platform for Disaster Reporting, Volunteer Coordination & Emergency Response</p>
+      
+      <div class="case-tech-title animate-fade-delay-1">
+        "A web-based crisis response platform designed to connect disaster reporting, volunteer participation, emergency assistance, and information into a single interface."
+      </div>
+
+      <!-- Spec Header Bar -->
+      <div class="case-specs-bar glass-card animate-fade-delay-2">
+        <div class="spec-bar-item">
+          <span class="spec-lbl">DEVELOPER</span>
+          <span class="spec-val red-accent">DHEERAJ KOLLI</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">ROLE</span>
+          <span class="spec-val">Full-Stack • Web Dev • System Design</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">TYPE</span>
+          <span class="spec-val">Web Prototype / Concept</span>
+        </div>
+        <div class="spec-bar-item">
+          <span class="spec-lbl">STACK</span>
+          <span class="spec-val">HTML5 / CSS3 / Web Interfaces</span>
+        </div>
+      </div>
+
+      <!-- Hero Visual Network Stage -->
+      <div class="case-hero-visual glass-card animate-fade-delay-3">
+        <div class="visual-header">
+          <span class="visual-tag">STAGE // CRISIS DISPATCH NETWORK</span>
+          <span class="visual-status red-status">● DISASTER RESPONSE HUB ACTIVE</span>
+        </div>
+
+        <div class="hero-pipeline-nodes">
+          <div class="pipeline-node red-glow">
+            <span class="p-icon">⚠️</span>
+            <span class="p-label">DISASTER REPORTING</span>
+          </div>
+          <div class="pipeline-arrow red-accent">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">🙋‍♂️</span>
+            <span class="p-label">VOLUNTEER REGISTRATION</span>
+          </div>
+          <div class="pipeline-arrow red-accent">➔</div>
+          <div class="pipeline-node">
+            <span class="p-icon">🚑</span>
+            <span class="p-label">EMERGENCY ACCESS</span>
+          </div>
+          <div class="pipeline-arrow red-accent">➔</div>
+          <div class="pipeline-node success-node red-node">
+            <span class="p-icon">ℹ️</span>
+            <span class="p-label">INFORMATION HUB</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- 2. PROJECT OVERVIEW -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">01 — PROJECT OVERVIEW</div>
+      <h2 class="section-heading">CENTRALIZED CRISIS DISPATCH</h2>
+      
+      <p class="section-lead-paragraph">
+        The Crisis Response Management platform presents a web-based approach intended to help individuals and organizations participate effectively in disaster relief efforts.
+      </p>
+
+      <div class="three-pillar-grid">
+        <div class="pillar-card glass-card">
+          <span class="pillar-num red-accent">01</span>
+          <h3 class="pillar-title">IDENTIFY</h3>
+          <p class="pillar-desc">Recognize critical emergency scenarios and access structured disaster information.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num red-accent">02</span>
+          <h3 class="pillar-title">REPORT</h3>
+          <p class="pillar-desc">Submit location coordinates and situation descriptions to log active crisis incidents.</p>
+        </div>
+        <div class="pillar-card glass-card">
+          <span class="pillar-num red-accent">03</span>
+          <h3 class="pillar-title">CONNECT & RESPOND</h3>
+          <p class="pillar-desc">Register volunteer availability and access dedicated pathways for emergency services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. THE PROBLEM -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">02 — THE PROBLEM</div>
+      <h2 class="section-heading">CHALLENGES IN EMERGENCY COORDINATION</h2>
+
+      <div class="problems-grid">
+        <div class="problem-card glass-card">
+          <span class="prob-num red-accent">01</span>
+          <h3 class="prob-title">DISASTER REPORTING</h3>
+          <p class="prob-desc">People in crisis need a quick, accessible way to report a disaster and provide situation details.</p>
+        </div>
+        <div class="problem-card glass-card">
+          <span class="prob-num red-accent">02</span>
+          <h3 class="prob-title">VOLUNTEER COORDINATION</h3>
+          <p class="prob-desc">Willing volunteers lack a structured platform to register their availability and skill sets.</p>
+        </div>
+        <div class="problem-card glass-card">
+          <span class="prob-num red-accent">03</span>
+          <h3 class="prob-title">EMERGENCY ACCESS</h3>
+          <p class="prob-desc">During crisis events, users require rapid access to emergency contact categories like ambulance and police.</p>
+        </div>
+        <div class="problem-card glass-card">
+          <span class="prob-num red-accent">04</span>
+          <h3 class="prob-title">INFORMATION ACCESS</h3>
+          <p class="prob-desc">Disaster-response resources are often scattered across fragmented, non-centralized channels.</p>
+        </div>
+      </div>
+
+      <!-- Visual Statement Banner -->
+      <div class="visual-statement-banner glass-card">
+        <div class="stmt-side">
+          <span class="stmt-lbl">FRAGMENTED CHALLENGE</span>
+          <span class="stmt-val">CRISIS ➔ FRAGMENTED INFORMATION ➔ DELAYED RESPONSE ➔ NEED FOR COORDINATION</span>
+        </div>
+        <div class="stmt-arrow red-accent">↓</div>
+        <div class="stmt-side red-accent">
+          <span class="stmt-lbl">THE CRISIS RESPONSE PLATFORM</span>
+          <span class="stmt-val">"One interface for reporting, connecting and responding."</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. THE SOLUTION -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">03 — THE SOLUTION</div>
+      <h2 class="section-heading">INTEGRATED CRISIS PLATFORM</h2>
+
+      <div class="solution-steps-grid">
+        <div class="sol-step-card glass-card">
+          <span class="step-badge red-accent">01</span>
+          <h3 class="step-title">DISASTER REPORTING</h3>
+          <p class="step-desc">Allows users to submit disaster location and detailed incident descriptions.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge red-accent">02</span>
+          <h3 class="step-title">VOLUNTEER REGISTRATION</h3>
+          <p class="step-desc">Volunteers submit name, contact information, skill tags, and availability.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge red-accent">03</span>
+          <h3 class="step-title">EMERGENCY PATHWAYS</h3>
+          <p class="step-desc">Access dedicated contact interface categories for Ambulance, Police, Fire, and Crisis Center.</p>
+        </div>
+        <div class="sol-step-card glass-card">
+          <span class="step-badge red-accent">04</span>
+          <h3 class="step-title">CRISIS INFORMATION HUB</h3>
+          <p class="step-desc">Provides centralized disaster-response guidance, volunteer resources, and information.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. CORE PLATFORM FLOW & ARCHITECTURE -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">04 — SYSTEM ARCHITECTURE</div>
+      <h2 class="section-heading">CORE PLATFORM FLOW & ARCHITECTURE</h2>
+
+      <div class="architecture-diagram-container glass-card">
+        <span class="pipe-label red-accent">USER INTERFACE ROUTING FLOW</span>
+        <div class="arch-flow">
+          <div class="arch-node red-accent">
+            <span class="arch-title">USER / VISITOR</span>
+            <span class="arch-sub">Web Access</span>
+          </div>
+          <div class="arch-line red-accent"></div>
+          <div class="arch-node">
+            <span class="arch-title">WEB INTERFACE</span>
+            <span class="arch-sub">HTML5 / CSS3 Portal</span>
+          </div>
+          <div class="arch-line red-accent"></div>
+          <div class="arch-node green">
+            <span class="arch-title">CRISIS PLATFORM HUB</span>
+            <span class="arch-sub">Centralized Interface</span>
+          </div>
+        </div>
+
+        <div class="arch-fusion-bridge">
+          <div class="bridge-line"></div>
+          <div class="bridge-label red-accent">PLATFORM INTERFACE MODULES</div>
+          <div class="bridge-line"></div>
+        </div>
+
+        <div class="arch-flow">
+          <div class="arch-node cyan">
+            <span class="arch-title">DISASTER REPORTING</span>
+            <span class="arch-sub">Location & Description</span>
+          </div>
+          <div class="arch-line cyan"></div>
+          <div class="arch-node purple">
+            <span class="arch-title">VOLUNTEER REGISTRATION</span>
+            <span class="arch-sub">Skills & Availability</span>
+          </div>
+          <div class="arch-line cyan"></div>
+          <div class="arch-node red-accent">
+            <span class="arch-title">EMERGENCY CONTACT</span>
+            <span class="arch-sub">Ambulance / Police / Fire</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. KEY MODULES & USER ACCESS -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">05 — PLATFORM MODULES</div>
+      <h2 class="section-heading">CORE FUNCTIONAL MODULES</h2>
+
+      <div class="dual-module-grid">
+        <!-- Disaster Reporting -->
+        <div class="module-card glass-card">
+          <span class="mod-num red-accent">01</span>
+          <h3 class="mod-title">DISASTER REPORTING</h3>
+          <span class="mod-sub">Location & Situation Description</span>
+          <p class="mod-desc">The reporting interface provides input controls for capturing disaster location data and situational descriptions from users on the scene.</p>
+        </div>
+
+        <!-- Volunteer Registration -->
+        <div class="module-card glass-card">
+          <span class="mod-num red-accent">02</span>
+          <h3 class="mod-title">BECOME A VOLUNTEER</h3>
+          <span class="mod-sub">Skills & Availability Portal</span>
+          <p class="mod-desc">Volunteers can submit their name, contact details, skill categories, and availability to join relief effort pools.</p>
+        </div>
+
+        <!-- Emergency Pathways -->
+        <div class="module-card glass-card">
+          <span class="mod-num red-accent">03</span>
+          <h3 class="mod-title">EMERGENCY RESPONSE PATHWAYS</h3>
+          <span class="mod-sub">Crisis Center / Ambulance / Police / Fire</span>
+          <p class="mod-desc">Categorized interface sections dedicated to emergency services, organizing emergency assistance options clearly.</p>
+        </div>
+
+        <!-- User Access -->
+        <div class="module-card glass-card">
+          <span class="mod-num red-accent">04</span>
+          <h3 class="mod-title">USER ACCESS & AUTHENTICATION</h3>
+          <span class="mod-sub">Login & Sign-Up Interface</span>
+          <p class="mod-desc">Sign-up and login interface forms collecting user profile fields (First Name, Last Name, Email, Contact Number, Password, Date of Birth).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. TECHNOLOGIES STACK -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">06 — TECH STACK</div>
+      <h2 class="section-heading">VERIFIED TECHNOLOGIES</h2>
+
+      <div class="tech-badges-grid">
+        <span class="tech-badge red-badge">HTML5</span>
+        <span class="tech-badge red-badge">CSS3</span>
+        <span class="tech-badge red-badge">WEB DEVELOPMENT</span>
+        <span class="tech-badge red-badge">UI/UX SYSTEM DESIGN</span>
+      </div>
+    </section>
+
+    <!-- 8. TECHNICAL HONESTY & LIMITATIONS -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">07 — TECHNICAL HONESTY</div>
+      <h2 class="section-heading">DESIGN EVOLUTION & CURRENT LIMITATIONS</h2>
+
+      <div class="comparison-grid">
+        <div class="comp-col glass-card">
+          <span class="comp-badge red-accent">PROTOTYPE CONCEPT</span>
+          <h3 class="comp-title">FROM CLASS PROJECT TO CONCEPT</h3>
+          <p class="comp-desc" style="font-size: 13px; line-height: 1.6; color: #d4d4d8;">
+            The original project was developed as a web prototype/concept to bring disaster reporting, volunteering, and emergency guidance into one unified interface.
+          </p>
+        </div>
+
+        <div class="comp-col glass-card">
+          <span class="comp-badge red-accent">CURRENT LIMITATIONS</span>
+          <h3 class="comp-title">TECHNICAL TRANSPARENCY</h3>
+          <ul class="comp-list">
+            <li>No verified real-time disaster data feed</li>
+            <li>No automated emergency-service integration</li>
+            <li>No automated volunteer matching algorithms</li>
+            <li>No production database or live backend</li>
+            <li>No automated emergency push notifications</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. FUTURE DIRECTIONS -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">08 — ROADMAP</div>
+      <h2 class="section-heading">FUTURE DEVELOPMENT</h2>
+
+      <div class="future-grid">
+        <div class="future-card glass-card">
+          <span class="f-num red-accent">01</span>
+          <h4 class="f-title">REAL-TIME DATA FEEDS</h4>
+          <p class="f-desc">Integration with verified disaster data services.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num red-accent">02</span>
+          <h4 class="f-title">LOCATION SERVICES</h4>
+          <p class="f-desc">Location-aware emergency resource detection.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num red-accent">03</span>
+          <h4 class="f-title">VOLUNTEER MATCHING</h4>
+          <p class="f-desc">Automated matching based on skills & crisis needs.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num red-accent">04</span>
+          <h4 class="f-title">NOTIFICATION SYSTEM</h4>
+          <p class="f-desc">Emergency push alerts and status updates.</p>
+        </div>
+        <div class="future-card glass-card">
+          <span class="f-num red-accent">05</span>
+          <h4 class="f-title">SCALABLE BACKEND</h4>
+          <p class="f-desc">Production-ready database and authentication server.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 10. PROJECT TAKEAWAY & ROLE -->
+    <section class="case-section-block">
+      <div class="section-label red-accent">09 — CREDITS</div>
+      <h2 class="section-heading">PROJECT OUTCOME & ROLE</h2>
+
+      <div class="role-card glass-card">
+        <h3 class="role-name">DHEERAJ KOLLI</h3>
+        <span class="role-title red-accent">FULL-STACK DEVELOPMENT • WEB DEVELOPMENT • SYSTEM DESIGN</span>
+        <p class="role-desc">"Contributed to the design and development of the Crisis Response Management web platform."</p>
+      </div>
+    </section>
+
+    <!-- 11. PROJECT NAVIGATION FOOTER -->
+    <nav class="project-nav-row">
+      <a href="/projects/solarpro.html" class="proj-nav-btn">
+        <span class="arrow">←</span> PREVIOUS PROJECT
+      </a>
+      <a href="/projects.html" class="proj-nav-btn">
+        BACK TO ALL PROJECTS
+      </a>
+      <a href="/contact.html" class="proj-nav-btn main-back-btn">
+        LET'S WORK TOGETHER <span class="arrow">➔</span>
+      </a>
+    </nav>
+
+    <!-- Minimal Main Footer -->
+    <footer class="main-footer">
+      <div class="footer-left">
+        <span class="footer-brand">DHEERAJ KOLLI</span>
+        <span class="footer-location">📍 Rajahmundry, AP, India</span>
+      </div>
+      <div class="footer-right">
+        <span class="footer-copy">© Dheeraj Kolli. All rights reserved.</span>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="module" src="/projects/crisis-response.js"></script>
+</body>
+</html>

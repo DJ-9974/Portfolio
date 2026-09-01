@@ -1,0 +1,19 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+
+*.log
+
+debug_corner.png
+test-live-web3forms.js
+test_inpainted_001.jpg
+# Smooth Scroll Animation.txt
+Portfolio.code-workspace
+# Smooth Scroll Animation.txt
+
+# Development notes
+# Smooth Scroll Animation.txt
+
+\# Smooth Scroll Animation.txt
