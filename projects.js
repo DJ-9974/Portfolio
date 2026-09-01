@@ -14,6 +14,11 @@ function lenisRaf(time) {
 requestAnimationFrame(lenisRaf);
 
 // Centralized Projects Data Architecture
+function getRoute(path) {
+  const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : (import.meta.env.BASE_URL + '/');
+  return baseUrl + (path.startsWith('/') ? path.slice(1) : path);
+}
+
 const caseStudies = [
   {
     id: "dermtrack",
@@ -23,7 +28,7 @@ const caseStudies = [
     sysTag: "SYS_PREVIEW // PROJECT_01",
     arch: "CNN + LSTM / RNN",
     status: "CASE STUDY AVAILABLE",
-    caseStudyRoute: "/projects/dermtrack.html",
+    caseStudyRoute: getRoute("projects/dermtrack.html"),
     accent: "cyan",
     gradientClass: "dermtrack-gradient",
     flowHtml: `
@@ -46,7 +51,7 @@ const caseStudies = [
     sysTag: "SYS_PREVIEW // PROJECT_02",
     arch: "Arduino + LDR + Servo",
     status: "CASE STUDY AVAILABLE",
-    caseStudyRoute: "/projects/solarpro.html",
+    caseStudyRoute: getRoute("projects/solarpro.html"),
     accent: "amber",
     gradientClass: "solarpro-gradient",
     flowHtml: `
@@ -71,7 +76,7 @@ const caseStudies = [
     sysTag: "SYS_PREVIEW // PROJECT_03",
     arch: "HTML5 / CSS3 Portal",
     status: "CASE STUDY AVAILABLE",
-    caseStudyRoute: "/projects/crisis-response.html",
+    caseStudyRoute: getRoute("projects/crisis-response.html"),
     accent: "red",
     gradientClass: "disaster-gradient",
     flowHtml: `
@@ -88,7 +93,7 @@ const caseStudies = [
     sysTag: "SYS_PREVIEW // PROJECT_04",
     arch: "Ryu + OpenFlow + Mininet",
     status: "BENCHMARKED PROTOTYPE",
-    caseStudyRoute: "/projects.html",
+    caseStudyRoute: getRoute("projects.html"),
     accent: "purple",
     gradientClass: "sdn-gradient",
     flowHtml: `

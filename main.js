@@ -33,7 +33,8 @@ requestAnimationFrame(lenisRaf);
 // Zero-padded frame URL generator (/frames/ezgif-frame-001.jpg ... /frames/ezgif-frame-300.jpg)
 function getFrameUrl(index) {
   const paddedIndex = String(index).padStart(3, '0');
-  return `/frames/ezgif-frame-${paddedIndex}.jpg`;
+  const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : (import.meta.env.BASE_URL + '/');
+  return baseUrl + 'frames/ezgif-frame-' + paddedIndex + '.jpg';
 }
 
 // Preload frames into memory array
@@ -226,11 +227,11 @@ function updateSectionVisibility() {
     let isActive = false;
 
     if (currentActiveId === 'hero' || currentActiveId === 'what-i-build') {
-      isActive = (href === '/' || href === '/index.html' || target === '#hero');
+      isActive = (href === '/' || href === '/index.html' || href === './' || href === 'index.html' || target === '#hero');
     } else if (currentActiveId === 'about') {
       isActive = (target === '#about');
     } else if (currentActiveId === 'projects-teaser' || currentActiveId === 'projects') {
-      isActive = (href === '/projects.html' || target === '#projects-teaser' || target === '#projects');
+      isActive = (href === '/projects.html' || href === 'projects.html' || href === './projects.html' || target === '#projects-teaser' || target === '#projects');
     } else if (currentActiveId === 'contact') {
       isActive = (target === '#contact');
     }
