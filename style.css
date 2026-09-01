@@ -237,7 +237,7 @@ html, body {
   justify-content: space-between;
   align-items: center;
   z-index: 1000;
-  background: rgba(5, 5, 8, 0.75);
+  background: rgba(5, 5, 8, 0.92);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
@@ -256,7 +256,7 @@ html, body {
 }
 
 .floating-nav {
-  background: rgba(10, 15, 25, 0.6);
+  background: rgba(8, 12, 22, 0.88);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -353,7 +353,7 @@ html, body {
 
 /* Glassmorphism Cards */
 .glass-card {
-  background: rgba(10, 15, 25, 0.55);
+  background: rgba(8, 12, 22, 0.88);
   backdrop-filter: blur(16px) saturate(160%);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -474,7 +474,7 @@ html, body {
 }
 
 .hero-action-btn {
-  background: rgba(10, 15, 25, 0.6);
+  background: rgba(8, 12, 22, 0.88);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
@@ -2603,7 +2603,7 @@ html, body {
   width: 100%;
   padding: 14px 18px;
   border-radius: 14px;
-  background: rgba(5, 8, 16, 0.7);
+  background: rgba(5, 8, 16, 0.88);
   border: 1px solid rgba(255, 255, 255, 0.15);
   color: #ffffff;
   font-family: inherit;
@@ -2786,7 +2786,7 @@ html, body {
   border-radius: 28px;
   overflow: hidden;
   position: relative;
-  background: rgba(10, 15, 25, 0.65);
+  background: rgba(8, 12, 22, 0.88);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid rgba(255, 255, 255, 0.12);
