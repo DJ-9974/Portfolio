@@ -4712,11 +4712,14 @@ body.menu-open-scroll-lock {
   }
 
   #scroll-explore {
-    position: absolute !important;
-    bottom: 12px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
+    position: relative !important;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
     right: auto !important;
+    transform: none !important;
+    align-self: center !important;
+    margin-top: 18px !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important;
@@ -4726,7 +4729,6 @@ body.menu-open-scroll-lock {
     box-shadow: none !important;
     backdrop-filter: none !important;
     z-index: 10 !important;
-    margin: 0 !important;
   }
 
   #scroll-explore .scroll-text-group {
