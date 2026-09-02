@@ -166,8 +166,13 @@ function setupPointerDragEvents() {
       targetElasticX = effectiveRadius * Math.cos(angle);
       targetElasticY = effectiveRadius * Math.sin(angle);
 
-      // Clamp horizontal displacement within sensible viewport boundaries
-      targetElasticX = Math.max(-200, Math.min(200, targetElasticX));
+      // Clamp horizontal & vertical displacement within sensible viewport boundaries for mobile stage
+      const isMobile = window.innerWidth <= 768;
+      const maxViewportX = isMobile ? Math.min(45, Math.max(15, (window.innerWidth - 275) / 2)) : 200;
+      const maxViewportY = isMobile ? 45 : 180;
+
+      targetElasticX = Math.max(-maxViewportX, Math.min(maxViewportX, targetElasticX));
+      targetElasticY = Math.max(-25, Math.min(maxViewportY, targetElasticY));
 
       // Dynamic Directional Rotation (-8deg to +8deg)
       targetRotation = Math.max(-8, Math.min(8, targetElasticX * 0.08 + targetElasticY * 0.02));
@@ -200,6 +205,45 @@ function setupPointerDragEvents() {
 
   interactiveIdCard.addEventListener('contextmenu', (e) => {
     if (isDragging) e.preventDefault();
+  });
+}
+
+function setupMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const navMenu = document.getElementById('floating-nav');
+  if (!toggleBtn || !navMenu) return;
+
+  function openMenu() {
+    navMenu.classList.add('nav-open');
+    toggleBtn.classList.add('open');
+    document.body.classList.add('menu-open-scroll-lock');
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('nav-open');
+    toggleBtn.classList.remove('open');
+    document.body.classList.remove('menu-open-scroll-lock');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (navMenu.classList.contains('nav-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  navMenu.querySelectorAll('.nav-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      closeMenu();
+    });
   });
 }
 
@@ -276,15 +320,17 @@ function physicsLoop() {
   }
 
   // D. Lanyard Attachment Pivot & Stretch Integration (Follows Card Vector)
-  const baseStrapHeight = 180;
+  const isMobile = window.innerWidth <= 768;
+  const baseStrapHeight = isMobile ? 99 : 180;
   const effX = currentElasticX;
-  const effY = baseStrapHeight + Math.max(-30, currentElasticY * 0.85);
+  const effY = baseStrapHeight + Math.max(-20, currentElasticY * 0.85);
 
   const lanyardStretchedLength = Math.hypot(effX, effY);
   const lanyardAngleDeg = Math.atan2(effX, effY) * (180 / Math.PI);
 
   if (lanyardAssembly) {
-    lanyardAssembly.style.transform = `translateX(${currentSwayX * 0.45}px) rotate(${lanyardAngleDeg * 0.45 + finalRotation * 0.2}deg)`;
+    const swayOffset = currentSwayX * 0.45 + (isMobile ? currentElasticX * 0.45 : 0);
+    lanyardAssembly.style.transform = `translateX(calc(-50% + ${swayOffset}px)) rotate(${lanyardAngleDeg * 0.45 + finalRotation * 0.2}deg)`;
   }
 
   if (lanyardStrap) {
@@ -312,5 +358,6 @@ function physicsLoop() {
 
 window.addEventListener('DOMContentLoaded', () => {
   setupPointerDragEvents();
+  setupMobileMenu();
   requestAnimationFrame(physicsLoop);
 });

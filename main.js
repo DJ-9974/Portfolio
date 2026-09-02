@@ -30,18 +30,28 @@ function lenisRaf(time) {
 }
 requestAnimationFrame(lenisRaf);
 
-// Zero-padded frame URL generator (/frames/ezgif-frame-001.jpg ... /frames/ezgif-frame-300.jpg)
-function getFrameUrl(index) {
+let currentLoadedFolderIsMobile = null;
+
+// Viewport-aware frame URL generator (/mobile frames/ezgif-frame-001.jpg vs /frames/ezgif-frame-001.jpg)
+function getFrameUrl(index, isMobile) {
   const paddedIndex = String(index).padStart(3, '0');
   const baseUrl = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : (import.meta.env.BASE_URL + '/');
-  return baseUrl + 'frames/ezgif-frame-' + paddedIndex + '.jpg';
+  const folder = isMobile ? 'mobile%20frames' : 'frames';
+  return `${baseUrl}${folder}/ezgif-frame-${paddedIndex}.jpg`;
 }
 
 // Preload frames into memory array
 function preloadFrames() {
+  const isMobile = window.innerWidth <= 640;
+  if (currentLoadedFolderIsMobile === isMobile && frames.length === TOTAL_FRAMES) return;
+
+  currentLoadedFolderIsMobile = isMobile;
+  frames.length = 0;
+  loadedCount = 0;
+
   for (let i = 1; i <= TOTAL_FRAMES; i++) {
     const img = new Image();
-    img.src = getFrameUrl(i);
+    img.src = getFrameUrl(i, isMobile);
 
     img.onload = () => {
       loadedCount++;
@@ -78,20 +88,27 @@ function onAllLoaded() {
   }
 }
 
-// Handle Canvas Resize & DevicePixelRatio
+// Handle Canvas Resize & DevicePixelRatio (Mobile-aware rendering)
 function resizeCanvas() {
-  const dpr = Math.max(1, window.devicePixelRatio || 1);
+  const isMobile = window.innerWidth <= 640;
+  const dpr = isMobile ? Math.min(window.devicePixelRatio || 1, 1.25) : Math.max(1, window.devicePixelRatio || 1);
   canvas.width = Math.floor(window.innerWidth * dpr);
   canvas.height = Math.floor(window.innerHeight * dpr);
   ctx.imageSmoothingEnabled = true;
-  ctx.imageSmoothingQuality = 'high';
-  render(true); // force redraw on resize
+  ctx.imageSmoothingQuality = isMobile ? 'medium' : 'high';
+  
+  if (currentLoadedFolderIsMobile !== null && currentLoadedFolderIsMobile !== isMobile) {
+    preloadFrames();
+  } else {
+    render(true); // force redraw on resize
+  }
 }
 
 window.addEventListener('resize', resizeCanvas);
+preloadFrames();
 resizeCanvas();
 
-// Draw Image maintaining aspect ratio ("contain") & calculate dynamic overlay position over Gemini sparkle
+// Draw Image maintaining aspect ratio & calculate dynamic overlay position
 function drawImageContain(img) {
   if (!img || !img.complete || img.naturalWidth === 0) return;
 
@@ -100,17 +117,27 @@ function drawImageContain(img) {
 
   const imgWidth = img.naturalWidth;
   const imgHeight = img.naturalHeight;
+  const isMobile = window.innerWidth <= 640;
 
-  // Contain fit scale factor
-  const scale = Math.min(canvasWidth / imgWidth, canvasHeight / imgHeight);
+  let scale, drawWidth, drawHeight, x, y;
 
-  const drawWidth = imgWidth * scale;
-  const drawHeight = imgHeight * scale;
+  if (isMobile) {
+    // Dedicated mobile 9:16 portrait frame composition: full hero portrait visual anchor
+    scale = Math.max(canvasWidth / imgWidth, (canvasHeight / imgHeight) * 0.70);
+    drawWidth = imgWidth * scale;
+    drawHeight = imgHeight * scale;
+    x = (canvasWidth - drawWidth) / 2;
+    y = 0; // Starts right underneath fixed top header
+  } else {
+    // Desktop contain fit using desktop 300-frame artwork
+    scale = Math.min(canvasWidth / imgWidth, canvasHeight / imgHeight);
+    drawWidth = imgWidth * scale;
+    drawHeight = imgHeight * scale;
+    x = (canvasWidth - drawWidth) / 2;
+    y = (canvasHeight - drawHeight) / 2;
+  }
 
-  const x = (canvasWidth - drawWidth) / 2;
-  const y = (canvasHeight - drawHeight) / 2;
-
-  // Fill canvas background with seamless left-navy to right-magenta linear gradient
+  // Fill canvas background with seamless gradient
   const sideGrad = ctx.createLinearGradient(0, 0, canvasWidth, 0);
   sideGrad.addColorStop(0, '#030a17');
   sideGrad.addColorStop(0.25, '#06152e');
@@ -123,8 +150,17 @@ function drawImageContain(img) {
 
   ctx.drawImage(img, x, y, drawWidth, drawHeight);
 
-  // Soft edge feathering on left & right borders of the rendered frame image to eliminate hard boundaries
-  if (x > 2) {
+  if (isMobile) {
+    // Soft bottom gradient feathering so suit jacket fades seamlessly into deep dark background
+    const featherHeight = drawHeight * 0.32;
+    const bottomFeather = ctx.createLinearGradient(0, y + drawHeight - featherHeight, 0, y + drawHeight);
+    bottomFeather.addColorStop(0, 'rgba(5, 11, 24, 0)');
+    bottomFeather.addColorStop(0.6, 'rgba(5, 11, 24, 0.85)');
+    bottomFeather.addColorStop(1, '#050b18');
+    ctx.fillStyle = bottomFeather;
+    ctx.fillRect(x - 2, y + drawHeight - featherHeight, drawWidth + 4, featherHeight + 10);
+  } else if (x > 2) {
+    // Soft edge feathering on left & right borders for desktop
     const featherWidth = Math.min(60 * scale, x);
     
     // Left edge feathering (blends into deep navy)
@@ -142,7 +178,7 @@ function drawImageContain(img) {
     ctx.fillRect(x + drawWidth - featherWidth, y, featherWidth, drawHeight);
   }
 
-  // Position SCROLL TO EXPLORE overlay precisely over the bottom-right Gemini sparkle icon
+  // Position SCROLL TO EXPLORE overlay
   positionScrollOverlay(x, y, drawWidth, drawHeight);
 }
 
@@ -150,6 +186,13 @@ function drawImageContain(img) {
 function positionScrollOverlay(x, y, drawWidth, drawHeight) {
   const scrollExploreElem = document.getElementById('scroll-explore');
   if (!scrollExploreElem) return;
+
+  const isMobile = window.innerWidth <= 768;
+  if (isMobile) {
+    scrollExploreElem.style.right = '';
+    scrollExploreElem.style.bottom = '';
+    return;
+  }
 
   const dpr = Math.max(1, window.devicePixelRatio || 1);
   const viewportWidth = window.innerWidth;
@@ -283,6 +326,53 @@ function setupNavEvents() {
       if (targetElem) {
         lenis.scrollTo(targetElem, { duration: 1.5 });
       }
+    });
+  });
+  // Mobile Menu Toggle Event Binding
+  setupMobileMenu();
+}
+
+function setupMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const navMenu = document.getElementById('floating-nav');
+  if (!toggleBtn || !navMenu) return;
+
+  function openMenu() {
+    navMenu.classList.add('nav-open');
+    toggleBtn.classList.add('open');
+    document.body.classList.add('menu-open-scroll-lock');
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('nav-open');
+    toggleBtn.classList.remove('open');
+    document.body.classList.remove('menu-open-scroll-lock');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (navMenu.classList.contains('nav-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navMenu.classList.contains('nav-open')) {
+      closeMenu();
+    }
+  });
+
+  navMenu.querySelectorAll('.nav-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      closeMenu();
     });
   });
 }

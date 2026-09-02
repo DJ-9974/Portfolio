@@ -260,8 +260,47 @@ function setupRowEvents() {
   // Initial check
   updateActiveRowFromScroll();
 }
+function setupMobileMenu() {
+  const toggleBtn = document.getElementById('mobile-menu-toggle');
+  const navMenu = document.getElementById('floating-nav');
+  if (!toggleBtn || !navMenu) return;
+
+  function openMenu() {
+    navMenu.classList.add('nav-open');
+    toggleBtn.classList.add('open');
+    document.body.classList.add('menu-open-scroll-lock');
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('nav-open');
+    toggleBtn.classList.remove('open');
+    document.body.classList.remove('menu-open-scroll-lock');
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (navMenu.classList.contains('nav-open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !toggleBtn.contains(e.target)) {
+      closeMenu();
+    }
+  });
+
+  navMenu.querySelectorAll('.nav-pill').forEach(pill => {
+    pill.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+}
 
 window.addEventListener('DOMContentLoaded', () => {
   setupCategoryFilters();
   setupRowEvents();
+  setupMobileMenu();
 });
